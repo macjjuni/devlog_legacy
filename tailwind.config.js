@@ -1,0 +1,81 @@
+/** @type {import('tailwindcss').Config} */
+
+const layout = {
+  header: '60px',
+  main: 'calc(100vh - 128px)',
+  footer: '68px',
+  voxel: '550px',
+}
+
+const halfVoxel = Number(layout.voxel.split('px')[0]) / 2 + 'px'
+const theme = {
+  darkMode: 'class',
+  content: [
+    './layout/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    // Or if using `src` directory:
+    './src/**/*.{js,ts,jsx,tsx}',
+  ],
+  theme: {
+    screens: {
+      sm: '465px',
+      md: '768px',
+      lg: '1100px',
+    },
+    colors: {
+      yellow: '#feca57',
+      red: '#ee5253',
+      navy: '#341f97',
+      black: '#222f3e',
+      primary: '#33A1FF',
+      secondary: '#32D962',
+      error: '#FA5C5C',
+      SUCCESS: '#04cf52',
+      WARNING: '#FFAB49',
+      BLG50: '#F8F9FA',
+      BLG100: '#F1F3F5',
+      BLG200: '#E8EBED',
+      BLG300: '#DEE2E6',
+      BLG400: '#C9CDD2',
+      BLG500: '#9EA4AA',
+      BLG600: '#72787F',
+      BLG700: '#454C53',
+      BLG800: '#26282B',
+      BLG900: '#1B1D1F',
+    },
+    width: {
+      voxelPC: layout.voxel,
+    },
+    height: {
+      header: layout.header,
+      footer: layout.footer,
+      main: layout.main,
+      voxelPC: layout.voxel,
+    },
+    minHeight: {
+      main: layout.main,
+    },
+    inset: {
+      voxelTop: `calc((100vh/2) - ${halfVoxel})`,
+    },
+    fontSize: {
+      head_lg: '30px',
+      head_md: '26px',
+      head_sm: '22px',
+      body: '18px',
+      lg: '20px',
+      md: '16px',
+      sm: '14px',
+    },
+    padding: {
+      sm: '4px',
+      md: '8px',
+      lg: '12px',
+      xlg: '16px',
+    },
+  },
+  plugins: [],
+}
+
+module.exports = theme
