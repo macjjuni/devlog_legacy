@@ -13,17 +13,18 @@ export const initialColorMode = () => {
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.documentElement.classList.add('dark')
       localStorage.setItem('theme', 'dark')
-      return
+      return 'dark'
     }
     document.documentElement.classList.remove('dark')
     localStorage.setItem('theme', 'light')
-    return
+    return 'light'
   }
   if (theme === 'dark') {
     document.documentElement.classList.add('dark')
-    return
+    return 'dark'
   }
   document.documentElement.classList.remove('dark')
+  return 'light'
 }
 
 export const toggleColorMode = () => {
