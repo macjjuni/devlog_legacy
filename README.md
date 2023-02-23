@@ -1,4 +1,4 @@
-# [kkusaeng's Portfolio [Link]](https://www.macjjuni.com/)
+# [kkusaeng's DevLog [Link]](https://kku.dev/)
 
 <br>
 
