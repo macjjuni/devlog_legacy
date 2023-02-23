@@ -1,14 +1,17 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import * as React from 'react'
+import Document, { Head, Html, Main, NextScript } from 'next/document'
 
-const Document = () => {
-  return (
-    <Html lang="ko">
-      <Head />
-      <body>
-        <Main />
-        <NextScript />
-      </body>
-    </Html>
-  )
+export default class MyDocument extends Document {
+  render() {
+    return (
+      <Html lang="ko">
+        <Head />
+
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    )
+  }
 }
-export default Document

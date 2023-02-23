@@ -8,8 +8,8 @@ const Logo = process.env.NEXT_PUBLIC_LOGO_TITLE || 'kku'
 const Header = () => {
   return (
     <header className="relative fc justify-between h-header">
-      <Link href="/" className={`${text.black} Logo after:bg-red`}>
-        {Logo}
+      <Link href="/">
+        <a className={`${text.black} Logo after:bg-red`}>{Logo}</a>
       </Link>
       <ul className="flex align-center justify-end gap-[2rem]">
         {pages.map((page) => (
