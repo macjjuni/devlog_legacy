@@ -1,13 +1,13 @@
 import { useEffect } from 'react'
 import { useAppDispatch } from '@/redux/hook'
-import { setDark, setLight } from '@/redux/slice/theme'
+import { setDark, setLight, dark } from '@/redux/slice/theme'
 import { initialColorMode } from '@/utils/colorMode'
 
 const InitialTheme = () => {
   const dispatch = useAppDispatch()
   useEffect(() => {
     const getTheme = initialColorMode()
-    if (getTheme === 'dark') dispatch(setDark())
+    if (getTheme === dark) dispatch(setDark())
     else dispatch(setLight())
   }, [])
 

@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import type { GetStaticPaths, GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
 import type { ExtendedRecordMap } from 'notion-types'
@@ -24,7 +25,6 @@ const DetailsPage = ({ recordMap }: IDetailsPage) => {
     <>
       <PageHead subTitle={pageTitle} description={description === '' ? pageTitle : description} />
       {recordMap && <NotionRender recordMap={recordMap} />}
-
       {/* <div className="max-w-4xl mx-auto my-8">
         <Giscus
           id="comments"
