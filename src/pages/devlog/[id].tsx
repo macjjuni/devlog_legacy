@@ -64,16 +64,22 @@ export const getStaticProps: GetStaticProps<IDetailsPage> = async ({ params }) =
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const databaseId = process.env.NOTION_DATABASEID
-  if (!databaseId) throw new Error('DATABASE_ID is not defined')
-
-  const databaseItems = await getCachedDatabaseItems(databaseId)
-  const paths = databaseItems.map(({ id }) => ({
-    params: { id },
-  }))
-
-  return {
-    paths,
-    fallback: true,
+  try {
+    if (!databaseId) throw new Error('DATABASE_ID is not defined')
+    const databaseItems = await getCachedDatabaseItems(databaseId)
+    const paths = databaseItems.map(({ id }) => ({
+      params: { id },
+    }))
+    return {
+      paths,
+      fallback: true,
+    }
+  } catch (e) {
+    console.error(e)
+    return {
+      paths: [],
+      fallback: false,
+    }
   }
 }
 

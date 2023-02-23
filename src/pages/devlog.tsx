@@ -33,18 +33,23 @@ const Devlog = ({ data, blogData }: IDevLog) => {
 
 export const getStaticProps: GetStaticProps<IDevLog> = async () => {
   const databaseId = process.env.NOTION_DATABASEID
-  if (!databaseId) throw new Error('DATABASE_ID is not defined')
-  const databaseItems = await getCachedDatabaseItems(databaseId)
-
-  const parsedData = parseDatabaseItems(databaseItems)
-  const blogData = await initBlogInfo(databaseId)
-
-  return {
-    props: {
-      data: parsedData,
-      blogData,
-    },
-    revalidate: 60 * 5,
+  try {
+    if (!databaseId) throw new Error('DATABASE_ID is not defined')
+    const databaseItems = await getCachedDatabaseItems(databaseId)
+    const parsedData = parseDatabaseItems(databaseItems)
+    const blogData = await initBlogInfo(databaseId)
+    return {
+      props: {
+        data: parsedData,
+        blogData,
+      },
+      revalidate: 60 * 5,
+    }
+  } catch (e) {
+    console.error(e)
+    return {
+      notFound: true,
+    }
   }
 }
 
