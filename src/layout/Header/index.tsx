@@ -13,7 +13,7 @@ const Header = () => {
       </Link>
       <ul className="flex align-center justify-end gap-[2rem]">
         {pages.map((page) => (
-          <li key={page.id} className={`${text.black}text-head_sm fwb italic`}>
+          <li key={page.id} className={`${text.black} text-head_sm fwb italic`}>
             <Link href={page.path}>{page.title}</Link>
           </li>
         ))}
