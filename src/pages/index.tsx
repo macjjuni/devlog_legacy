@@ -1,17 +1,21 @@
+import { text } from '@/styles/global'
+
+const CName = `${text.light} text-xlg`
+
 const Home = () => {
   return (
-    <section className="flex justify-between items-center h-main select-none">
-      <div className="w-[100%] m-0" />
-      <div className="w-[100%] m-0">
-        <h1>About</h1>
+    <section className="flex justify-between items-center min-h-main select-none md:flex-row flex-col">
+      <div className="w-[100%] m-0 md:h-[500px] h-[400px]" />
+      <div className="flex flex-col justify-start gap-8  w-[100%] m-0">
+        <h1 className={`${text.black} text-head_lg fwb italic`}>About</h1>
 
-        <h2>
+        <h2 className={CName}>
           안녕하세요? 👋
           <br />
           이것저것 만들기 좋아하는 프론트엔드 개발자 이준희입니다.
         </h2>
 
-        <h2>
+        <h2 className={CName}>
           꾸준함이 생명이라는 인생 모토를 가지고 있으며
           <br />
           새로 알게 된 개발 지식을{' '}
@@ -21,9 +25,9 @@ const Home = () => {
           에 기록하는 습관을 가지고 있습니다.
         </h2>
 
-        <h2>겉으로 드러나지 않는 예민한 성격으로 개발할 때는 사소한 디테일에도 신경을 쓰는 편이고 프로젝트 완성도를 높이는데 열정적입니다.</h2>
+        <h2 className={CName}>겉으로 드러나지 않는 예민한 성격으로 개발할 때는 사소한 디테일에도 신경을 쓰는 편이고 프로젝트 완성도를 높이는데 열정적입니다.</h2>
 
-        <h2>
+        <h2 className={CName}>
           저에게 관심이 있으시거나, 궁금한 점이 있다면,
           <br />
           이력서 또는 언제든 메일을 보내주세요!

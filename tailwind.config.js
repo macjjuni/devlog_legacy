@@ -43,6 +43,8 @@ const theme = {
       BLG700: '#454C53',
       BLG800: '#26282B',
       BLG900: '#1B1D1F',
+      BG_0: 'rgba(135, 131, 120, 0.15)',
+      COLOR_0: 'rgba(255, 255, 255, 0.81)',
     },
     width: {
       voxelPC: layout.voxel,
@@ -64,7 +66,8 @@ const theme = {
       head_md: '26px',
       head_sm: '22px',
       body: '18px',
-      lg: '20px',
+      xlg: '20px',
+      lg: '18px',
       md: '16px',
       sm: '14px',
     },

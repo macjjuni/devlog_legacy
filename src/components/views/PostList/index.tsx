@@ -11,7 +11,7 @@ const PostList = ({ data }: IPostList) => {
   return (
     <ul className="flex justify-start flex-col">
       {data.map((post) => (
-        <li key={post.id} className="block border-b border-solid border-BLG300 py-xlg px-sm">
+        <li key={post.id} className="block border-b border-solid border-BG_0 py-xlg px-sm">
           <Link href={`/devlog/${post.id}`}>
             <a className="flex flex-col justify-start w-[100%]">
               <p className="text-sm text-primary fwb">{post.category?.name}</p>

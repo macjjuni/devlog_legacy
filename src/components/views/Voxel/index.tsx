@@ -76,10 +76,10 @@ const Voxel = ({ load, onLoad }: IVoxel) => {
   }, [progress])
 
   return (
-    <div className={`${isTransparent ? 'z-[-1]' : ''} absolute top-0 left-0 h-main`}>
-      <div className="sticky w-voxelPC h-voxelPC top-voxelTop left-0">
+    <div className={`${isTransparent ? 'z-[-1]' : ''} absolute top-0 left-0 md:h-main h-[400px] md:w-[calc(50%-32px)] w-[calc(100%-32px)]`}>
+      <div className="sticky  md:top-voxelTop top-0 left-0 md:w-[calc((100vw-32px)/2)] w-[100%] lg:w-voxelPC md:h-voxelPC h-[400px]">
         {!load && <Spinner />}
-        <Canvas className={`${load ? 'opacity-100	' : ''} ${isTransparent ? 'transparent' : ''} ease duration-300`}>
+        <Canvas className={`${load ? 'opacity-100	' : ''} ${isTransparent ? 'transparent' : ''} ease duration-[0.14s]`}>
           <PerspectiveCamera position={[0, -2.6, 0]} far={1000}>
             <directionalLight intensity={0.2} />
             <ambientLight intensity={0.3} />

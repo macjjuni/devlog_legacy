@@ -13,6 +13,6 @@ export const MainAnimation = {
     type: 'spring',
     stiffness: 500,
     damping: 25,
-    duration: 0.15,
+    duration: 0.2,
   },
 }

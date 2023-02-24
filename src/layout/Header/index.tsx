@@ -11,9 +11,9 @@ const Header = () => {
       <Link href="/">
         <a className={`${text.black} Logo after:bg-red`}>{Logo}</a>
       </Link>
-      <ul className="flex align-center justify-end gap-[2rem]">
+      <ul className="flex align-center justify-end md:gap-8 gap-4">
         {pages.map((page) => (
-          <li key={page.id} className={`${text.black} text-head_sm fwb italic`}>
+          <li key={page.id} className={`${text.black} md:text-head_sm text-xl fwb italic fcc`}>
             <Link href={page.path} className="p-sm">
               {page.title}
             </Link>
