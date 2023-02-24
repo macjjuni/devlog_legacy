@@ -47,8 +47,7 @@
 
 .notion-aside {
   position: sticky;
-  top: auto;
-  z-index: 101;
+  top: 50px;
 
   align-self: flex-start;
   flex: 1;
@@ -78,22 +77,10 @@
   font-size: 20px;
   font-weight: bold;
   padding: 4px 0;
-  margin-bottom: 20px;
   text-align: center;
   border-radius: 2px;
 }
-.notion-aside-table-of-contents-header::after {
-  content: '';
-  position: absolute;
-  bottom: -13px;
-  left: 50%;
-  width: 2px;
-  height: 12px;
-  background-color: #000;
-}
-.dark-mode .notion-aside-table-of-contents-header::after {
-  background-color: #fff;
-}
+
 .notion-table-of-contents > a > span {
   display: block;
   white-space: nowrap;
@@ -109,6 +96,7 @@
 .notion-page-content {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 .notion-collection-row-body {
   display: flex;

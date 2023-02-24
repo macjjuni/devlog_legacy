@@ -65,7 +65,7 @@
 }
 
 .dark-mode {
-  --fg-color: rgba(255, 255, 255, 0.9);
+  --fg-color: #ffffffcf;
   --fg-color-0: var(--fg-color);
   --fg-color-1: var(--fg-color);
   --fg-color-2: var(--fg-color);
@@ -2499,8 +2499,8 @@ svg.notion-page-icon {
   margin-bottom: 1em;
 }
 
-.notion-collection-group > summary {
-}
+/* .notion-collection-group > summary {
+} */
 
 .notion-collection-group > summary > div {
   transform: scale(0.85);
@@ -2743,4 +2743,15 @@ svg.notion-page-icon {
   padding: 0 !important;
   text-decoration: underline;
   cursor: pointer;
+}
+
+.dark .notion-hr {
+  border-color: var(--bg-color-0);
+}
+
+.dark .notion-collection-row {
+  border-bottom: 1px solid var(--bg-color-0);
+}
+.dark .notion-aside-table-of-contents {
+  background: none;
 }
