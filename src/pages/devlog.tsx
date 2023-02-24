@@ -6,6 +6,7 @@ import { getCachedDatabaseItems } from '@/notion/utils/getCachedDatabaseItems'
 import { parseDatabaseItems } from '@/notion/utils/parseDatabaseItems'
 import { initBlogInfo } from '@/notion/notion'
 import PageHead from '@/components/common/PageHead'
+import Banner from '@/components/views/Banner'
 import PostList from '@/components/views/PostList'
 import type { IDevLogData, IBlogData } from '@/notion/types'
 
@@ -25,6 +26,7 @@ const Devlog = ({ data, blogData }: IDevLog) => {
   }, [currentPage, data])
   return (
     <section className="">
+      <Banner data={blogData} />
       <PageHead subTitle="DevLog" />
       <PostList data={postData} />
     </section>
