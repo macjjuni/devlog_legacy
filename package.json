@@ -24,6 +24,7 @@
     "next": "^12.1.0",
     "notion-client": "^6.16.0",
     "notion-utils": "^6.16.0",
+    "nprogress": "^0.2.0",
     "prismjs": "^1.29.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -37,6 +38,7 @@
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.1.6",
     "@react-three/fiber": "^8.11.2",
+    "@types/gtag.js": "^0.0.12",
     "@types/nprogress": "^0.2.0",
     "@types/three": "^0.149.0",
     "@typescript-eslint/eslint-plugin": "^5.53.0",
