@@ -2,8 +2,8 @@
 
 const layout = {
   header: '60px',
-  main: 'calc(100vh - 128px)',
-  footer: '68px',
+  main: 'calc(100vh - 120px)',
+  footer: '60px',
   voxel: '528px',
 }
 

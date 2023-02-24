@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css');
+
 @font-face {
   font-family: 'NanumBarunGothic';
   font-style: normal;
@@ -31,6 +33,11 @@
 
 .nanum * {
   font-family: 'NanumBarunGothic', sans-serif;
+}
+
+.pretendard {
+  font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic',
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
 }
 
 * {
@@ -135,8 +142,8 @@ body {
 
 .tooltip {
   position: absolute;
-  bottom: calc(100% + 20px);
-  left: 50%;
+  top: -38px;
+  left: 43%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -162,4 +169,43 @@ body {
   top: 30px;
   transform: translateX(-50%) rotate(90deg);
   z-index: 0;
+}
+
+.SNSLink {
+  position: relative;
+}
+
+.SNSLink::after {
+  content: '';
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  width: 8px;
+  height: 8px;
+  background-color: #04cf52;
+  border-radius: 50%;
+  animation: blinkEffect 0.95s ease-in-out infinite alternate;
+}
+
+@keyframes blinkEffect {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.NavLink::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  bottom: 9px;
+  width: 0;
+  height: 3px;
+  transition: width 0.3s ease;
+}
+
+.NavLink.active::after {
+  width: calc(100% - 8px);
 }

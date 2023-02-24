@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <section className="flex justify-between items-center min-h-main select-none md:flex-row flex-col">
       <div className="w-[100%] m-0 md:h-[500px] h-[400px]" />
-      <div className="flex flex-col justify-start gap-8  w-[100%] m-0">
+      <div className="flex flex-col justify-start gap-8  w-[100%] m-0 pretendard">
         <h1 className={`${text.black} text-head_lg fwb italic`}>About</h1>
 
         <h2 className={CName}>

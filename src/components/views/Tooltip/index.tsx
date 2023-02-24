@@ -1,6 +1,7 @@
 import { type SetStateAction, Dispatch, useEffect } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { TooltipAnimation } from './framer'
+import { text } from '@/styles/global'
 
 const Tooltip = ({ value, setValue }: { value: boolean; setValue: Dispatch<SetStateAction<boolean>> }) => {
   useEffect(() => {
@@ -14,8 +15,8 @@ const Tooltip = ({ value, setValue }: { value: boolean; setValue: Dispatch<SetSt
     <>
       <AnimatePresence>
         {value && (
-          <motion.div {...TooltipAnimation} className="tooltip bg-BLG300 after:border-l-BLG300">
-            <span>Copied!</span>
+          <motion.div {...TooltipAnimation} className="tooltip bg-BLG200 opacity-50 dark:bg-BLG700 after:border-l-BLG200 dark:after:border-l-BLG700">
+            <span className={`${text.normal}`}>Copied!</span>
           </motion.div>
         )}
       </AnimatePresence>
