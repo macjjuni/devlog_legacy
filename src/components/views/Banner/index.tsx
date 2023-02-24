@@ -11,7 +11,7 @@ const Banner = ({ data }: { data: IBlogData }) => {
       </div>
       <div className="flex justify-between items-center flex-col gap-[8px] py-[24px]">
         <h1 className={`${text.light} flex justify-between items-center text-head_lg fwb w-[100%]`}>
-          <div>
+          <div className="whitespace-nowrap	">
             {data.icon} {data.title}
           </div>
           <SNSList />

@@ -8,7 +8,7 @@ const instaURL = process.env.NEXT_PUBLIC_INSTA || 'https://www.instagram.com/jun
 
 const SNSList = () => {
   return (
-    <ul className="flex justify-end items-center gap-4">
+    <ul className="flex justify-end items-center gap-1">
       <SNSItem href={githubURL} icon={<FiGithub fontSize={26} />} title="Tistory Blog" />
       <SNSItem href={tistoryURL} icon={<TistorySVG fontSize={26} />} title="Tistory Blog" />
       <SNSItem href={instaURL} icon={<FiInstagram fontSize={26} />} title="Instagram" />

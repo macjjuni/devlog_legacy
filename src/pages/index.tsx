@@ -1,3 +1,4 @@
+import Mail from '@/components/views/Mail'
 import { text } from '@/styles/global'
 
 const CName = `${text.light} text-xlg`
@@ -32,7 +33,7 @@ const Home = () => {
           <br />
           이력서 또는 언제든 메일을 보내주세요!
         </h2>
-        {/* <Mail /> */}
+        <Mail />
       </div>
     </section>
   )

@@ -4,7 +4,7 @@ const layout = {
   header: '60px',
   main: 'calc(100vh - 128px)',
   footer: '68px',
-  voxel: '550px',
+  voxel: '528px',
 }
 
 const halfVoxel = Number(layout.voxel.split('px')[0]) / 2 + 'px'
