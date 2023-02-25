@@ -12,11 +12,11 @@ const Header = () => {
   return (
     <header className="relative fc justify-between h-header">
       <Link href="/">
-        <a className={`${text.black} Logo after:bg-primary`}>{Logo}</a>
+        <a className={`${text.black} Logo after:bg-primary select-none`}>{Logo}</a>
       </Link>
       <ul className="flex align-center justify-end md:gap-8 gap-4">
         {pages.map((page) => (
-          <li key={page.id} className="fcc relative">
+          <li key={page.id} className="fcc relative select-none">
             <Link href={page.path}>
               <a
                 className={`NavLink ${pathname === page.path ? 'active' : ''} ${page.path !== '/' ? (pathname.includes('devlog') ? 'active' : '') : ''} 
