@@ -18,6 +18,7 @@ const PageHead = ({ subTitle, description }: IPageHead) => {
 
   return (
     <Head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>{fullTitle}</title>
       <meta name="description" content={fullDescription} />
       <link rel="canonical" href={fullUrl} />
