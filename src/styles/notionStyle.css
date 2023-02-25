@@ -1990,6 +1990,7 @@ svg.notion-page-icon {
 .notion-collection-row {
   width: 100%;
   padding: 4px 0 8px;
+  border-top: 1px solid var(--fg-color-0);
   border-bottom: 1px solid var(--fg-color-0);
   margin-bottom: 1em;
 }
@@ -2741,6 +2742,7 @@ svg.notion-page-icon {
 }
 
 .dark .notion-collection-row {
+  border-top: 1px solid var(--bg-color-0);
   border-bottom: 1px solid var(--bg-color-0);
 }
 .dark .notion-aside-table-of-contents {

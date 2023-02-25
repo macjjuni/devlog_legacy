@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 
 const layout = {
-  header: '60px',
-  main: 'calc(100vh - 120px)',
+  header: '70px',
+  main: 'calc(100vh - 130px)',
   footer: '60px',
   voxel: '528px',
 }
