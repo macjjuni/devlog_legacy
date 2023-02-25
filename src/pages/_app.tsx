@@ -1,7 +1,4 @@
-// import 'prismjs/themes/prism.css'
-// import 'react-notion-x/src/styles.css'
 import 'katex/dist/katex.min.css'
-
 import '@/styles/reset.css'
 import '@/styles/notionStyle.css'
 import '@/styles/prism.css'

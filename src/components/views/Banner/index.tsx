@@ -6,17 +6,17 @@ import SNSList from '../SNSList'
 const Banner = ({ data }: { data: IBlogData }) => {
   return (
     <div className="Banner-wrap">
-      <div className="Banner-top-wrap relative w-[100%] md:h-[300px] h-[200px] round-[3px] overflow-hidden z-[-1] select-none">
-        <Image src={data.coverURL} className="w-[100%] h-[100%] top-[100%] object-cover" alt="kku.dev blog top banner image" width={1200} height={700} placeholder="empty" quality={80} priority />
+      <div className="Banner-top-wrap relative w-full md:h-[300px] h-[200px] round-[3px] overflow-hidden z-[-1] select-none">
+        <Image src={data.coverURL} className="w-full h-full top-[100%] object-cover" alt="kku.dev blog top banner image" width={1200} height={700} placeholder="empty" quality={80} priority />
       </div>
       <div className="flex justify-between items-center flex-col gap-[8px] py-[24px]">
-        <h1 className={`${text.light} flex justify-between items-center text-head_lg fwb w-[100%]`}>
-          <div className="Banner-title after:bg-primary whitespace-nowrap	">
+        <h1 className={`${text.light} flex justify-between items-center text-head_lg fwb w-full`}>
+          <div className="cursor-pointer ease hover:text-primary">
             {data.icon} {data.title}
           </div>
           <SNSList />
         </h1>
-        <h2 className={`${text.normal} flex justify-start items-start text-lg pl-2 w-[100%]`}>{data.description}</h2>
+        <h2 className={`${text.normal} flex justify-start items-start text-lg pl-2 w-full`}>{data.description}</h2>
       </div>
     </div>
   )

@@ -8,7 +8,6 @@ const Logo = process.env.NEXT_PUBLIC_LOGO_TITLE || 'kku'
 
 const Header = () => {
   const { pathname } = useRouter()
-  console.log(pathname)
 
   return (
     <header className="relative fc justify-between h-header">
@@ -20,9 +19,8 @@ const Header = () => {
           <li key={page.id} className="fcc relative">
             <Link href={page.path}>
               <a
-                className={`NavLink ${pathname === page.path ? 'active' : ''} ${page.path !== '/' ? (pathname.includes('devlog') ? 'active' : '') : ''} ${
-                  text.black
-                } md:text-head_sm text-xl fwb italic p-sm after:bg-BLG900`}
+                className={`NavLink ${pathname === page.path ? 'active' : ''} ${page.path !== '/' ? (pathname.includes('devlog') ? 'active' : '') : ''} 
+                ${text.black} md:text-head_sm text-xl fwb italic p-sm after:bg-BLG1000 dark:after:bg-BLG0`}
               >
                 {page.title}
               </a>

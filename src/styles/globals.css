@@ -76,6 +76,10 @@ body {
   opacity: 0 !important;
 }
 
+.ease {
+  transition: 0.3s ease;
+}
+
 @keyframes spinnerVibe {
   0% {
     transform: translate(0, 0);
@@ -203,28 +207,9 @@ body {
   bottom: 9px;
   width: 0;
   height: 3px;
-  transition: width 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .NavLink.active::after {
   width: calc(100% - 8px);
-}
-
-.Banner-title {
-  position: relative;
-  cursor: pointer;
-}
-
-.Banner-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 3px;
-  transition: width 0.3s ease;
-}
-
-.Banner-title:hover::after {
-  width: 100%;
 }

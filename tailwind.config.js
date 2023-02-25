@@ -32,6 +32,7 @@ const theme = {
       error: '#FA5C5C',
       SUCCESS: '#04cf52',
       WARNING: '#FFAB49',
+      BLG0: 'white',
       BLG50: '#F8F9FA',
       BLG100: '#F1F3F5',
       BLG200: '#E8EBED',
@@ -42,17 +43,20 @@ const theme = {
       BLG700: '#454C53',
       BLG800: '#26282B',
       BLG900: '#1B1D1F',
+      BLG1000: 'black',
       BG_0: 'rgba(135, 131, 120, 0.15)',
       COLOR_0: 'rgba(255, 255, 255, 0.81)',
     },
     width: {
       voxelPC: layout.voxel,
+      full: '100%',
     },
     height: {
       header: layout.header,
       footer: layout.footer,
       main: layout.main,
       voxelPC: layout.voxel,
+      full: '100%',
     },
     minHeight: {
       main: layout.main,

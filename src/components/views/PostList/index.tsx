@@ -13,7 +13,7 @@ const PostList = ({ data }: IPostList) => {
       {data.map((post) => (
         <li key={post.id} className="block border-b border-solid border-BG_0 py-xlg px-sm">
           <Link href={`/devlog/${post.id}`}>
-            <a className="flex flex-col justify-start w-[100%]">
+            <a className="flex flex-col justify-start w-full">
               <p className="text-sm text-primary fwb">{post.category?.name}</p>
               <h2 className={`text-head_sm ${text.normal} fwb whitespace-nowrap truncate`}>{post.title}</h2>
               <p className="text-sm text-BLG500">{moment(post.published).format('YYYY-MM-DD')}</p>

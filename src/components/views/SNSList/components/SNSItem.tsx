@@ -10,7 +10,7 @@ interface ISNSItem {
 const SNSItem: FC<ISNSItem> = ({ href, target = '_blank', icon, title }) => {
   return (
     <li className="SNSLink fcc w-[40px] h-[40px] pointer rounded-full transition-transform ease duration-500 hover:rotate-[12deg]">
-      <a href={href} target={target} title={title} className="fcc w-[100%] h-[100%]">
+      <a href={href} target={target} title={title} className="fcc w-full h-full">
         {icon}
       </a>
     </li>
