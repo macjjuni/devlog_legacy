@@ -31,10 +31,11 @@ const Home = () => {
           <h2 className={CName}>겉으로 드러나지 않는 예민한 성격으로 개발할 때는 사소한 디테일에도 신경을 쓰는 편이고 프로젝트 완성도를 높이는데 열정적입니다.</h2>
 
           <h2 className={CName}>
-            저에게 관심이 있으시거나, 궁금한 점이 있다면
+            저에게 관심이 있으시거나 궁금한 점이 있다면
             <br className="hidden lg:block" />
             <span className="lg:hidden">, </span>
-            이력서 또는 언제든 메일을 보내주세요!
+            {/* 이력서 또는 언제든 메일을 보내주세요! */}
+            언제든 메일을 보내주세요!
           </h2>
           <Mail />
         </div>
