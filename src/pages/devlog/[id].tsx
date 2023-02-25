@@ -10,7 +10,7 @@ import { getCachedDatabaseItems } from '@/notion/utils/getCachedDatabaseItems'
 import { getPageContent } from '@/notion/notion'
 
 interface IDetailsPage {
-  recordMap?: ExtendedRecordMap
+  recordMap: ExtendedRecordMap
 }
 
 const DetailsPage = ({ recordMap }: IDetailsPage) => {
@@ -23,7 +23,7 @@ const DetailsPage = ({ recordMap }: IDetailsPage) => {
   return (
     <>
       <PageHead subTitle={pageTitle} description={description === '' ? pageTitle : description} />
-      {recordMap && <NotionRender recordMap={recordMap} />}
+      <NotionRender recordMap={recordMap} />
       {/* <div className="max-w-4xl mx-auto my-8">
         <Giscus
           id="comments"

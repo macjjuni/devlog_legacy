@@ -27,10 +27,6 @@ interface NotionPageRendererProps {
 const NotionRender = ({ recordMap }: NotionPageRendererProps) => {
   const { theme } = useAppSelector((state) => state.theme)
 
-  if (!recordMap) {
-    return null
-  }
-
   return (
     <>
       <NotionRenderer
@@ -39,6 +35,7 @@ const NotionRender = ({ recordMap }: NotionPageRendererProps) => {
         darkMode={theme === dark}
         showTableOfContents
         disableHeader
+        pageCover={<></>}
         previewImages={!!recordMap?.signed_urls[0]}
         minTableOfContentsItems={1}
         mapImageUrl={(url, block) => {
@@ -52,7 +49,6 @@ const NotionRender = ({ recordMap }: NotionPageRendererProps) => {
           Equation,
           Pdf,
           Modal,
-          // Modal,
         }}
       />
     </>

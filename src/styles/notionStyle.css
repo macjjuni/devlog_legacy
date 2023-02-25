@@ -154,15 +154,7 @@
   max-height: calc(100vh - 148px - 16px);
   min-width: 222px;
   overflow: auto;
-  background: var(--bg-color);
   border-radius: 4px;
-}
-
-.notion-aside-table-of-contents-header {
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 1.1em;
-  word-break: break-word;
 }
 
 .notion-aside-table-of-contents .notion-table-of-contents-item {
@@ -1669,7 +1661,6 @@ svg.notion-page-icon {
 
 .notion-table-of-contents {
   width: 100%;
-  margin: 4px 0;
 }
 
 .notion-table-of-contents-item {
