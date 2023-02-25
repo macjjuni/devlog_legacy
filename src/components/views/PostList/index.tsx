@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import moment from 'moment'
 import { text } from '@/styles/global'
+import NoPost from '@/components/views/NoPost'
 import type { IDevLogData } from '@/notion/types'
 
 interface IPostList {
@@ -11,7 +12,7 @@ const PostList = ({ data }: IPostList) => {
   return (
     <ul className="flex justify-start flex-col">
       {data.map((post) => (
-        <li key={post.id} className="block border-b border-solid border-BG_0 py-xlg px-sm">
+        <li key={post.id} className="block border-b border-solid border-BG_0 py-xlg md:px-sm">
           <Link href={`/devlog/${post.id}`}>
             <a className="flex flex-col justify-start w-full">
               <p className="text-sm text-primary fwb">{post.category?.name}</p>
@@ -29,6 +30,7 @@ const PostList = ({ data }: IPostList) => {
           </Link>
         </li>
       ))}
+      {data.length === 0 && <NoPost />}
     </ul>
   )
 }
