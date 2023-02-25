@@ -11,12 +11,14 @@ interface PaginationButtonProps {
 const PaginationButton = ({ children, to, disabled = false }: PaginationButtonProps) => {
   return (
     <Link href={{ query: { page: to } }}>
-      <button type="button" className={`${text.normal} ${disabled ? 'cursor-not-allowed	' : ''}`} disabled={disabled}>
+      <button type="button" className={`${text.normal} text-lg ${disabled ? 'cursor-not-allowed	' : ''}`} disabled={disabled}>
         {children}
       </button>
     </Link>
   )
 }
+
+const iconSize = 28
 
 interface PaginationProps {
   current: number
@@ -26,9 +28,9 @@ const Pagination = ({ current, total }: PaginationProps) => {
   const lastPageNumber = Math.ceil(total / POSTS_PER_PAGE)
 
   return (
-    <div className="fcc g-4 mt-[20px] py-[20px]">
+    <div className="fcc gap-4 mt-[20px] py-[12px]">
       <PaginationButton to={current - 1} disabled={current === 1}>
-        <MdOutlineKeyboardArrowLeft fontSize={24} />
+        <MdOutlineKeyboardArrowLeft fontSize={iconSize} />
       </PaginationButton>
 
       {Array.from(Array(PAGINATION_RANGE), (_, index) => current - index - 1)
@@ -41,7 +43,7 @@ const Pagination = ({ current, total }: PaginationProps) => {
           ) : null
         )}
 
-      <button type="button" className={`active ${text.normal} fcc w-[34px] h-[34px] p-[4px] rounded-full`}>
+      <button type="button" className={`active ${text.normal} text-lg fcc w-[34px] h-[34px] p-[4px] rounded-full`}>
         {current}
       </button>
 
@@ -54,7 +56,7 @@ const Pagination = ({ current, total }: PaginationProps) => {
       )}
 
       <PaginationButton to={current + 1} disabled={current === lastPageNumber}>
-        <MdOutlineKeyboardArrowRight fontSize={24} />
+        <MdOutlineKeyboardArrowRight fontSize={iconSize} />
       </PaginationButton>
     </div>
   )

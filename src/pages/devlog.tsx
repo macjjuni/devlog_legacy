@@ -8,6 +8,7 @@ import { initBlogInfo } from '@/notion/notion'
 import PageHead from '@/components/common/PageHead'
 import Banner from '@/components/views/Banner'
 import PostList from '@/components/views/PostList'
+import Category from '@/components/views/Category'
 import Pagination from '@/components/views/Pagination'
 import type { IDevLogData, IBlogData } from '@/notion/types'
 
@@ -29,6 +30,7 @@ const Devlog = ({ data, blogData }: IDevLog) => {
     <section className="">
       <Banner data={blogData} />
       <PageHead subTitle="DevLog" />
+      <Category postCount={postCount} category={blogData?.category?.options} />
       <PostList data={postData} />
       <Pagination current={currentPage} total={data.length} />
     </section>
