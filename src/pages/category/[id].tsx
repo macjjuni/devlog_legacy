@@ -23,11 +23,17 @@ const CategoryPage = ({ data, blogData }: ICateory) => {
   const { query } = useRouter()
   const currentPage = query.page ? parseInt(query.page.toString(), 10) : 1
   const [postData, setPostData] = useState(data.slice(POSTS_PER_PAGE * (currentPage - 1), POSTS_PER_PAGE * currentPage))
-  const [postCount] = useState(data.length)
+  const [postCount, setPostCount] = useState(data.length)
 
+  // 게시글 목록 데이터 초기화
   useEffect(() => {
     setPostData(data.slice(POSTS_PER_PAGE * (currentPage - 1), POSTS_PER_PAGE * currentPage))
   }, [currentPage, data])
+  // 카테고리별 게시글 개수 초기화
+  useEffect(() => {
+    setPostCount(postData.length)
+  }, [postData])
+
   return (
     <section className="">
       <Banner data={blogData} />
