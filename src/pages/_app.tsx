@@ -1,5 +1,5 @@
 import 'katex/dist/katex.min.css'
-import '@/styles/reset.css'
+// import '@/styles/reset.css'
 import '@/styles/notionStyle.css'
 import '@/styles/prism.css'
 import '@/styles/notionStyle.scss'
