@@ -25,10 +25,9 @@ const theme = {
     },
     colors: {
       yellow: '#feca57',
-      red: '#ee5253',
       navy: '#341f97',
       black: '#222f3e',
-      primary: '#33A1FF',
+      primary: '#ee5253',
       secondary: '#32D962',
       error: '#FA5C5C',
       SUCCESS: '#04cf52',

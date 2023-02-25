@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <header className="relative fc justify-between h-header">
       <Link href="/">
-        <a className={`${text.black} Logo after:bg-red`}>{Logo}</a>
+        <a className={`${text.black} Logo after:bg-primary`}>{Logo}</a>
       </Link>
       <ul className="flex align-center justify-end md:gap-8 gap-4">
         {pages.map((page) => (

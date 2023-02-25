@@ -209,3 +209,22 @@ body {
 .NavLink.active::after {
   width: calc(100% - 8px);
 }
+
+.Banner-title {
+  position: relative;
+  cursor: pointer;
+}
+
+.Banner-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  transition: width 0.3s ease;
+}
+
+.Banner-title:hover::after {
+  width: 100%;
+}
