@@ -25,7 +25,7 @@ const Mail = () => {
     <div className="relative flex justify-end items-center mt-[22px] w-full pointer sm:justify-start">
       <button type="button" onClick={clickCopy} onTouchStart={clickCopy} className="flex justify-start items-center gap-2 relative">
         <LottieItem className="ml-[-6px]" defaultOption={defaultOption} animationData={errorLottie} />
-        <h3 title="Copied Email" className={`relative top-[-2px] text-xlg ${text.black} hover:underline underline-offset-4`}>
+        <h3 title="Copied Email" className={`relative top-[-2px] text-md ${text.black} hover:underline underline-offset-4`}>
           {EMAIL}
         </h3>
         <Tooltip value={isMail} setValue={setMail} />

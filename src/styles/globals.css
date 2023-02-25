@@ -56,7 +56,7 @@ body {
 }
 
 .dark:is(html, body) {
-  background-color: rgb(32, 32, 32);
+  background-color: #202020;
 }
 
 .fcc {

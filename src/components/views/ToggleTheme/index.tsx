@@ -3,6 +3,8 @@ import { FaMoon } from 'react-icons/fa'
 import { ImSun } from 'react-icons/im'
 import { useAppDispatch, useAppSelector } from '@/redux/hook'
 import { setDark, setLight, dark, light } from '@/redux/slice/theme'
+import { setMetaThemeColor } from '@/utils/colorMode'
+import { lightBg, darkBg } from '@/styles/global'
 import * as Theme from '@/utils/colorMode'
 
 const ToggleTheme = () => {
@@ -11,8 +13,13 @@ const ToggleTheme = () => {
 
   const onToggle = () => {
     Theme.toggleColorMode()
-    if (theme === dark) dispatch(setLight())
-    else dispatch(setDark())
+    if (theme === dark) {
+      dispatch(setLight())
+      setMetaThemeColor(lightBg)
+      return
+    }
+    dispatch(setDark())
+    setMetaThemeColor(darkBg)
   }
 
   return (

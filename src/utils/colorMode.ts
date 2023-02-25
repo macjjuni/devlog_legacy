@@ -38,3 +38,8 @@ export const toggleColorMode = () => {
   document.documentElement.classList.add('dark')
   localStorage.setItem('theme', 'dark')
 }
+
+export const setMetaThemeColor = (hexCode: string) => {
+  const themeColor: HTMLMetaElement | null = document.querySelector("meta[name='theme-color']")
+  if (themeColor !== null) themeColor.content = hexCode
+}
