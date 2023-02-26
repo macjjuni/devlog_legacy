@@ -20,6 +20,7 @@ interface ICateory {
 
 const CategoryPage = ({ data, blogData }: ICateory) => {
   const { query } = useRouter()
+
   const currentPage = query.page ? parseInt(query.page.toString(), 10) : 1
   const [postData, setPostData] = useState(data.slice(POSTS_PER_PAGE * (currentPage - 1), POSTS_PER_PAGE * currentPage))
   const [postCount, setPostCount] = useState(data.length)
@@ -39,7 +40,7 @@ const CategoryPage = ({ data, blogData }: ICateory) => {
       <PageHead subTitle="DevLog" />
       <Category postCount={postCount} category={blogData?.category?.options} />
       <PostList data={postData} />
-      <Pagination current={currentPage} total={data.length} />
+      <Pagination current={currentPage} total={postCount} />
     </section>
   )
 }
@@ -58,8 +59,8 @@ export const getStaticProps: GetStaticProps<ICateory> = async ({ params }) => {
       categoryName: name,
     })
 
-    const parsedData = parseDatabaseItems(databaseItems)
     const blogData = await initBlogInfo(databaseId)
+    const parsedData = parseDatabaseItems(databaseItems)
 
     return {
       props: {
