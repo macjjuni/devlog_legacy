@@ -6,7 +6,7 @@ import SNSList from '../SNSList'
 const Banner = ({ data }: { data: IBlogData }) => {
   return (
     <div className="Banner-wrap">
-      <div className="Banner-top-wrap relative w-full md:h-[300px] h-[200px] round-[3px] overflow-hidden z-[-1] select-none">
+      <div className="Banner-top-wrap relative w-full md:h-[300px] h-[200px] rounded-[3px] overflow-hidden z-[-1] select-none">
         <Image src={data.coverURL} className="w-full h-full top-[100%] object-cover" alt="kku.dev blog top banner image" width={1200} height={700} placeholder="empty" quality={80} priority />
       </div>
       <div className="flex justify-between items-center flex-col gap-[8px] py-[24px]">
