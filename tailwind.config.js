@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 
 const layout = {
-  header: '70px',
-  main: 'calc(100vh - 130px)',
-  footer: '60px',
+  header: '60px',
+  main: 'calc(100vh - 106px)',
+  footer: '46px',
   voxel: '528px',
 }
 
@@ -79,6 +79,7 @@ const theme = {
       md: '8px',
       lg: '12px',
       xlg: '16px',
+      header: layout.header,
     },
   },
   plugins: [],

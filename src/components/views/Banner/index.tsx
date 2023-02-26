@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import type { IBlogData } from '@/notion/types'
+import type { IBlogData } from '@/types/types'
 import { text } from '@/styles/global'
 import SNSList from '../SNSList'
 

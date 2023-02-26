@@ -40,6 +40,7 @@ const WithNProgress = ({ children }: { children: ReactNode }) => {
           #nprogress .bar {
             height: ${options.height};
             background: ${options.color};
+            z-index: 9999;
           }
         `}
       </style>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>kku.dev</loc><lastmod>2023-02-26T10:34:05.682Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>kku.dev/devlog</loc><lastmod>2023-02-26T10:34:05.682Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>kku.dev/devlog/84a1231f-46ea-44ee-b095-59a3c060ccce</loc><lastmod>2023-02-26T10:34:05.682Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>kku.dev/devlog/bfe178c8-fb5c-4043-b661-f31ebbbb6295</loc><lastmod>2023-02-26T10:34:05.682Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>kku.dev/devlog/50de4f50-48e1-4fe7-a252-841944b71d85</loc><lastmod>2023-02-26T10:34:05.682Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>kku.dev/devlog/396b8c8f-2e3e-47c0-8d27-20dfaec7fd0a</loc><lastmod>2023-02-26T10:34:05.682Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>kku.dev/devlog/d2133d1d-f5ff-42e9-873a-33f5f3cb0966</loc><lastmod>2023-02-26T10:34:05.682Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>kku.dev/devlog/2a246caf-fb12-45cd-bad3-877174fcf2c0</loc><lastmod>2023-02-26T10:34:05.682Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>kku.dev/category/개발</loc><lastmod>2023-02-26T10:34:05.682Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>kku.dev/category/React</loc><lastmod>2023-02-26T10:34:05.682Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>kku.dev/category/Vue</loc><lastmod>2023-02-26T10:34:05.682Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>kku.dev/category/TypeScript</loc><lastmod>2023-02-26T10:34:05.682Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>kku.dev/category/JavaScript</loc><lastmod>2023-02-26T10:34:05.682Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>kku.dev/category/일상</loc><lastmod>2023-02-26T10:34:05.682Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+</urlset>

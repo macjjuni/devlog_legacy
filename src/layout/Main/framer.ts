@@ -1,4 +1,4 @@
-export const xWidth = 15
+export const xWidth = 10
 
 export const MainAnimation = {
   initial: {
@@ -11,8 +11,7 @@ export const MainAnimation = {
   },
   transition: {
     type: 'spring',
-    stiffness: 500,
-    damping: 25,
-    duration: 0.2,
+    stiffness: 100,
+    damping: 20,
   },
 }

@@ -2,17 +2,16 @@ import { useEffect, useState } from 'react'
 import type { GetStaticProps, GetStaticPaths } from 'next'
 import { useRouter } from 'next/router'
 import { POSTS_PER_PAGE } from '@/notion/config'
-import { getCachedDatabaseItems } from '@/notion/utils/getCachedDatabaseItems'
-import { parseDatabaseItems } from '@/notion/utils/parseDatabaseItems'
+import { getCachedDatabaseItems } from '@/utils/getCachedDatabaseItems'
+import { parseDatabaseItems } from '@/utils/parseDatabaseItems'
 import { initBlogInfo } from '@/notion/notion'
 import PageHead from '@/components/common/PageHead'
 import Banner from '@/components/views/Banner'
 import PostList from '@/components/views/PostList'
 import Category from '@/components/views/Category'
 import Pagination from '@/components/views/Pagination'
-import type { IBlogData, IDevLogData } from '@/notion/types'
-
-import { checkKorean } from '@/notion/utils/checkKorean'
+import type { IBlogData, IDevLogData } from '@/types/types'
+import { checkKorean } from '@/utils/checkKorean'
 
 interface ICateory {
   data: IDevLogData[]
@@ -53,9 +52,11 @@ export const getStaticProps: GetStaticProps<ICateory> = async ({ params }) => {
   const name = isKorean ? queryId : queryId.replace(/\b[a-z]/g, (char) => char.toUpperCase())
 
   try {
-    const databaseId = process.env.NOTION_DATABASEID
+    const databaseId = process.env.NOTION_DATABASE_ID
     if (!databaseId) throw new Error('DATABASE_ID is not defined')
-    const databaseItems = await getCachedDatabaseItems(databaseId, { categoryName: name })
+    const databaseItems = await getCachedDatabaseItems(databaseId, {
+      categoryName: name,
+    })
 
     const parsedData = parseDatabaseItems(databaseItems)
     const blogData = await initBlogInfo(databaseId)
@@ -74,7 +75,7 @@ export const getStaticProps: GetStaticProps<ICateory> = async ({ params }) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const databaseId = process.env.NOTION_DATABASEID
+  const databaseId = process.env.NOTION_DATABASE_ID
   if (!databaseId) throw new Error('DATABASE_ID is not defined')
   const { category } = await initBlogInfo(databaseId)
 

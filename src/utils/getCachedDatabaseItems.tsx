@@ -1,18 +1,14 @@
 import fs from 'fs'
 import path from 'path'
-import { DatabaseQueryOption, getDatabaseItems } from '../notion'
+import { DatabaseQueryOption, getDatabaseItems } from '@/notion/notion'
 
 const OPTION_QUERY = 'option'
 
 export const getCachedDatabaseItems = async (databaseId: string, option?: DatabaseQueryOption) => {
   if (process.env.NODE_ENV === 'development') return await getDatabaseItems(databaseId, option)
-
   const cacheKey = new URLSearchParams({})
-
   if (option) cacheKey.append(OPTION_QUERY, JSON.stringify(option))
-
   const CACHE_PATH = path.join(__dirname, `.collection${cacheKey.has(OPTION_QUERY) ? `?${cacheKey.toString()}` : ''}.json`)
-
   let cachedData: Awaited<ReturnType<typeof getDatabaseItems>> = []
 
   try {
@@ -25,7 +21,6 @@ export const getCachedDatabaseItems = async (databaseId: string, option?: Databa
 
   if (!cachedData.length) {
     cachedData = await getDatabaseItems(databaseId, option)
-
     try {
       if (!fs.existsSync(CACHE_PATH)) {
         fs.writeFileSync(CACHE_PATH, JSON.stringify(cachedData))

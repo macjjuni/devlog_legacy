@@ -6,7 +6,7 @@
   --fg-color-2: rgba(55, 53, 47, 0.4);
   --fg-color-3: rgba(55, 53, 47, 0.6);
   --fg-color-4: #000;
-  --fg-color-5: rgba(55, 53, 47, 0.024);
+  --fg-color-5: rgb(233, 233, 231);
   --fg-color-6: rgba(55, 53, 47, 0.8);
   --fg-color-icon: var(--fg-color);
 
@@ -71,7 +71,7 @@
   --fg-color-2: var(--fg-color);
   --fg-color-3: var(--fg-color);
   --fg-color-4: var(--fg-color);
-  --fg-color-5: rgba(255, 255, 255, 0.7);
+  --fg-color-5: rgb(47, 47, 47);
   --fg-color-6: #fff;
   --fg-color-icon: #fff;
 

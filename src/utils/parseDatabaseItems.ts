@@ -1,5 +1,5 @@
-import { getDatabaseItems } from '../notion'
-import { IDevLogData } from '@/notion/types'
+import { getDatabaseItems } from '../notion/notion'
+import { IDevLogData } from '@/types/types'
 
 const siteURL = process.env.SITE_URL || 'http://kku.dev'
 
@@ -14,7 +14,7 @@ export const parseDatabaseItems = (databaseItems: Awaited<ReturnType<typeof getD
     // 블로그 목록 데이터 가공
     const cover = item.cover?.type === 'external' ? item.cover.external.url : item.cover?.file ? item.cover.file.url : `${siteURL}/image/post-cover.webp`
     const title = 이름?.type === 'title' ? 이름.title[0].plain_text : ''
-    const published = 작성일?.type === 'created_time' ? 작성일.created_time : '' || ''
+    const published = 작성일?.type === 'date' ? (작성일.date?.start ? 작성일.date.start : '') : '' || ''
     const category = 카테고리?.type === 'select' ? 카테고리?.select : null
     const tags = 태그?.type === 'multi_select' ? 태그.multi_select : []
 

@@ -12,7 +12,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
   }
 
   return (
-    <div className="relative max-w-screen-lg mx-auto px-xlg">
+    <div className="relative max-w-screen-lg mx-auto  px-lg md:px-xlg pt-header">
       <Header />
       <Voxel load={voxelLoad} onLoad={onLoadVoxel} />
       <Main>{children}</Main>

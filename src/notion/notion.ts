@@ -54,14 +54,15 @@ export const getDatabaseItems = async (databaseId: string, option?: DatabaseQuer
       },
     ],
   })
-
   return databaseItems.results
 }
 
-// 글 조회
-export const getPageContent = async (pageId: string) => {
-  const recordMap = await reactNotionApi.getPage(pageId)
-  return recordMap
+export const getPageItem = async (pageId: string) => {
+  const pageItem = await notion.pages.retrieve({
+    page_id: pageId,
+  })
+
+  return pageItem
 }
 
 // 글 검색
@@ -81,15 +82,16 @@ export const getSearchItems = async (query: string) => {
   return searchItems.results as PageObjectResponse[]
 }
 
-// // 태그 및 정보 조회
-// interface InitBlogInfo {
-//   thumb: string
-//   tags: string[]
-//   icon: string
-// }
+// 글 조회
+export const getPageContent = async (pageId: string) => {
+  const recordMap = await reactNotionApi.getPage(pageId)
+  return recordMap
+}
 
 export const initBlogInfo = async (databaseId: string) => {
-  const database = (await notion.databases.retrieve({ database_id: databaseId })) as DatabaseObjectResponse
+  const database = (await notion.databases.retrieve({
+    database_id: databaseId,
+  })) as DatabaseObjectResponse
   const title = database.title[0]?.type === 'text' ? database.title[0].plain_text : ''
   const description = database.description[0]?.type === 'text' ? database.description[0].plain_text : ''
   const coverURL = database.cover?.type === 'file' ? database.cover?.file.url : ''

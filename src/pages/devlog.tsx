@@ -2,15 +2,15 @@ import { useEffect, useState } from 'react'
 import type { GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
 import { POSTS_PER_PAGE } from '@/notion/config'
-import { getCachedDatabaseItems } from '@/notion/utils/getCachedDatabaseItems'
-import { parseDatabaseItems } from '@/notion/utils/parseDatabaseItems'
+import { getCachedDatabaseItems } from '@/utils/getCachedDatabaseItems'
+import { parseDatabaseItems } from '@/utils/parseDatabaseItems'
 import { initBlogInfo } from '@/notion/notion'
 import PageHead from '@/components/common/PageHead'
 import Banner from '@/components/views/Banner'
 import PostList from '@/components/views/PostList'
 import Category from '@/components/views/Category'
 import Pagination from '@/components/views/Pagination'
-import type { IDevLogData, IBlogData } from '@/notion/types'
+import type { IDevLogData, IBlogData } from '@/types/types'
 
 interface IDevLog {
   data: IDevLogData[]
@@ -38,7 +38,7 @@ const Devlog = ({ data, blogData }: IDevLog) => {
 }
 
 export const getStaticProps: GetStaticProps<IDevLog> = async () => {
-  const databaseId = process.env.NOTION_DATABASEID
+  const databaseId = process.env.NOTION_DATABASE_ID
   try {
     if (!databaseId) throw new Error('DATABASE_ID is not defined')
     const databaseItems = await getCachedDatabaseItems(databaseId)

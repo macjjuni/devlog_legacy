@@ -14,17 +14,19 @@ import InitialTheme from '@/components/common/InitialTheme'
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
-    <Provider store={store}>
-      {/* 구글 애널리틱스 */}
-      <GAScript />
-      {/* 컬러모드 초기화 */}
-      <InitialTheme />
-      <WithNProgress>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </WithNProgress>
-    </Provider>
+    <>
+      <Provider store={store}>
+        {/* 구글 애널리틱스 */}
+        <GAScript />
+        {/* 컬러모드 초기화 */}
+        <InitialTheme />
+        <WithNProgress>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </WithNProgress>
+      </Provider>
+    </>
   )
 }
 

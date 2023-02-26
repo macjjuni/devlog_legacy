@@ -1,4 +1,8 @@
-import { IPages } from './types'
+export interface IPages {
+  id: string
+  path: string
+  title: string
+}
 
 export const pages: IPages[] = [
   {

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: kku.dev
+
+# Sitemaps
+Sitemap: kku.dev/sitemap.xml
