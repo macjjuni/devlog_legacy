@@ -1,7 +1,7 @@
 import 'katex/dist/katex.min.css'
-import '@/styles/notionStyle.css'
-import '@/styles/prism.css'
 import '@/styles/notionStyle.scss'
+import '@/styles/notion.default.css'
+import '@/styles/prism.css'
 import '@/styles/globals.css'
 
 import type { AppProps } from 'next/app'
