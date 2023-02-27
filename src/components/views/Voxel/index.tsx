@@ -9,7 +9,7 @@ import Model from './components/Model'
 const voxelURL = 'https://tistory4.daumcdn.net/tistory/3617178/skin/images/juni-coding-voxel.gltf'
 
 // 해당 페이지 경로에서만 모델 보이기
-const accessRoutes = ['/', '/404']
+export const accessRoutes = ['/', '/404']
 
 interface IVoxel {
   load: boolean
