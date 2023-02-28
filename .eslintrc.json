@@ -58,6 +58,7 @@
     "no-nested-ternary": "off",
     "eslint-disable-next-line func-names, object-shorthand": "off",
     "import/no-extraneous-dependencies": "off",
-    "jsx-a11y/anchor-is-valid": "off"
+    "jsx-a11y/anchor-is-valid": "off",
+    "eslint-disable-next-line @next/next/no-img-element": "off"
   }
 }
