@@ -15,7 +15,15 @@ const Banner = ({ data }: { data: IBlogData }) => {
     <div className="Banner-wrap">
       <div className="Banner-top-wrap relative w-full md:h-[300px] h-[200px] rounded-[3px] overflow-hidden z-[-1] select-none">
         {!isLoad && <Skeleton />}
-        <Image src={data.coverURL} onLoad={onLoadImage} className="w-full h-full top-[100%] object-cover" alt="kku.dev blog top banner image" width={1200} height={700} priority />
+        <Image
+          src={data.coverURL}
+          onLoad={onLoadImage}
+          className="absolute top-[50%] translate-y-[-40%] l-[0] w-full h-[auto] "
+          alt="kku.dev blog top banner image"
+          width={1200}
+          height={700}
+          priority
+        />
       </div>
       <div className="flex justify-between items-center flex-col gap-[8px] py-[24px]">
         <h1 className={`${text.light} flex justify-between items-center text-head_lg fwb w-full`}>
