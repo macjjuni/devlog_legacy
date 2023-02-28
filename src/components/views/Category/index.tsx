@@ -15,7 +15,7 @@ const Category = ({ postCount, category }: IBlogCategory) => {
   return (
     <aside>
       <ul className="TagWrap flex justify-start items-center border-b border-b-BLG300 dark:border-b-BLG700 ease">
-        <li className={`${text.light} ${pathname === '/devlog' ? 'TagActive' : ''} TagItem text-md after:bg-BLG800 dark:after:bg-BLG200 hover:bg-BLG200 dark:hover:bg-BLG700`}>
+        <li className={`${text.light} ${pathname === '/devlog' ? 'TagActive' : ''} TagItem text-lg after:bg-BLG800 dark:after:bg-BLG200 hover:bg-BLG200 dark:hover:bg-BLG700`}>
           <Link href="/devlog" className="fcc gap-1">
             <BsFillGridFill />
             전체 글{pathname === '/devlog' && `(${postCount})`}
