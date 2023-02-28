@@ -1,17 +1,4 @@
 /* 노션 스타일 */
-:root {
-  --notion-max-width: 100%;
-}
-.notion-app {
-  position: relative;
-  min-height: 100vh;
-  font-size: 18px;
-  background: none;
-}
-
-.notion-page-cover-wrapper {
-  margin-bottom: -60px;
-}
 .notion-page-icon-hero.notion-page-icon-image .notion-page-icon {
   border-radius: 4rem;
 }
@@ -25,14 +12,6 @@
       }
     }
   }
-}
-.notion-title {
-  text-align: left;
-  margin: 20px 0;
-}
-.notion-page {
-  padding-bottom: 64px;
-  transition: 0.3s ease;
 }
 
 .notion-aside {
@@ -54,11 +33,7 @@
   gap: 1rem;
   width: 100%;
 }
-.notion-aside-table-of-contents {
-  width: 100%;
-  padding: 0 8px;
-  margin: 0;
-}
+
 .notion-aside-table-of-contents-header {
   position: relative;
   display: block;
@@ -68,10 +43,6 @@
   padding: 4px 0;
   text-align: left;
   border-radius: 2px;
-}
-
-.notion-table-of-contents-item {
-  padding: 8px 0;
 }
 
 .notion-table-of-contents > a > span {

@@ -29,6 +29,7 @@ const NotionRender = ({ recordMap }: NotionPageRendererProps) => {
       fullPage
       darkMode={theme === dark}
       disableHeader
+      minTableOfContentsItems={1}
       pageCover={<></>}
       showTableOfContents
       previewImages={!!recordMap?.preview_images}
