@@ -1,13 +1,21 @@
+import { useState, memo } from 'react'
 import Image from 'next/image'
+import Skeleton from './components/Skeleton'
 import type { IBlogData } from '@/types/types'
 import { text } from '@/styles/global'
 import SNSList from '../SNSList'
 
 const Banner = ({ data }: { data: IBlogData }) => {
+  const [isLoad, setLoad] = useState(false)
+  const onLoadImage = () => {
+    setLoad(true)
+  }
+
   return (
     <div className="Banner-wrap">
       <div className="Banner-top-wrap relative w-full md:h-[300px] h-[200px] rounded-[3px] overflow-hidden z-[-1] select-none">
-        <Image src={data.coverURL} className="w-full h-full top-[100%] object-cover" alt="kku.dev blog top banner image" width={1200} height={700} placeholder="empty" quality={80} priority />
+        {!isLoad && <Skeleton />}
+        <Image src={data.coverURL} onLoad={onLoadImage} className="w-full h-full top-[100%] object-cover" alt="kku.dev blog top banner image" width={1200} height={700} priority />
       </div>
       <div className="flex justify-between items-center flex-col gap-[8px] py-[24px]">
         <h1 className={`${text.light} flex justify-between items-center text-head_lg fwb w-full`}>
@@ -22,4 +30,4 @@ const Banner = ({ data }: { data: IBlogData }) => {
   )
 }
 
-export default Banner
+export default memo(Banner)
