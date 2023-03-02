@@ -9,7 +9,6 @@ const Banner = ({ data }: { data: IBlogData }) => {
   const onLoadImage = () => {
     setLoad(true)
   }
-
   return (
     <div className="Banner-wrap">
       <div className="Banner-top-wrap relative w-full md:h-[300px] h-[200px] rounded-[3px] overflow-hidden z-[-1] select-none">

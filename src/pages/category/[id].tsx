@@ -78,18 +78,22 @@ export const getStaticProps: GetStaticProps<ICateory> = async ({ params }) => {
 export const getStaticPaths: GetStaticPaths = async () => {
   const databaseId = process.env.NOTION_DATABASE_ID
   if (!databaseId) throw new Error('DATABASE_ID is not defined')
-  const { category } = await initBlogInfo(databaseId)
 
-  const paths = category?.options.map(({ name: cateName }) => ({
-    params: { id: cateName },
-  }))
+  try {
+    const { category } = await initBlogInfo(databaseId)
 
-  if (!paths || paths.length === 0) throw new Error('No Categories')
+    const paths = category?.options.map(({ name: cateName }) => ({
+      params: { id: cateName },
+    }))
 
-  return {
-    paths,
-    // 등록된 카테고리 외에 없을경우 404 예외처리
-    fallback: false,
+    if (!paths || paths.length === 0) throw new Error('No Categories')
+    return {
+      paths,
+      fallback: 'blocking', // 등록된 카테고리 외에 없을경우 404 예외처리
+    }
+  } catch (e) {
+    console.error(e)
+    return { paths: [], fallback: false }
   }
 }
 

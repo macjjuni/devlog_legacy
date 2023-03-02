@@ -8,7 +8,6 @@ const Error = () => {
   return (
     <>
       <PageHead subTitle={msg} />
-
       <section className="flex justify-between items-center  h-main">
         <div className="w-full" />
         <div className="w-full flex items-center flex-col">
