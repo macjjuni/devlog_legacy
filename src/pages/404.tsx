@@ -12,7 +12,7 @@ const Error = () => {
         <div className="w-full h-[400px] md:h-full" />
         <div className="w-full flex items-center flex-col sm:justify-start">
           <h2 className={`${text.black} text-head_lg fwb`}>{msg}</h2>
-          <Link href="/devlog" className={`${text.light} text-lg fcc bg-BLG600 text-BLG100 rounded-md px-[12px] py-[6px] mt-[30px]`}>
+          <Link href="/devlog" className={`${text.light} text-lg fcc bg-BLG200 dark:bg-BLG700 rounded-md px-[12px] py-[6px] mt-[30px]`}>
             Go DevLog
           </Link>
         </div>
