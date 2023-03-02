@@ -28,8 +28,8 @@ const Devlog = ({ data, blogData }: IDevLog) => {
   }, [currentPage, data])
   return (
     <section className="">
-      <Banner data={blogData} />
       <PageHead subTitle="DevLog" />
+      <Banner data={blogData} />
       <Category postCount={postCount} category={blogData?.category?.options} />
       <PostList data={postData} />
       <Pagination current={currentPage} total={data.length} />

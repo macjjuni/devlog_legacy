@@ -35,7 +35,7 @@ const CategoryPage = ({ data, blogData }: ICateory) => {
   }, [postData])
 
   return (
-    <section className="">
+    <section>
       <Banner data={blogData} />
       <PageHead subTitle="DevLog" />
       <Category postCount={postCount} category={blogData?.category?.options} />
