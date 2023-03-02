@@ -8,9 +8,9 @@ const Error = () => {
   return (
     <>
       <PageHead subTitle={msg} />
-      <section className="flex justify-between items-center  h-main">
-        <div className="w-full" />
-        <div className="w-full flex items-center flex-col">
+      <section className="flex flex-col md:flex-row justify-start md:justify-between items-center h-main">
+        <div className="w-full h-[400px] md:h-full" />
+        <div className="w-full flex items-center flex-col sm:justify-start">
           <h2 className={`${text.black} text-head_lg fwb`}>{msg}</h2>
           <Link href="/devlog" className={`${text.light} text-lg fcc bg-BLG600 text-BLG100 rounded-md px-[12px] py-[6px] mt-[30px]`}>
             Go DevLog
