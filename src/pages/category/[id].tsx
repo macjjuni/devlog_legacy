@@ -62,6 +62,19 @@ export const getStaticProps: GetStaticProps<ICateory> = async ({ params }) => {
     const blogData = await initBlogInfo(databaseId)
     const parsedData = parseDatabaseItems(databaseItems)
 
+    const cateArr = blogData.category?.options.map((cate) => cate.name) || []
+    const currentName = cateArr.find((cate) => cate === queryId)
+
+    // 카테고리가 없을 때 404 페이지로 이동
+    if (currentName === undefined) {
+      return {
+        redirect: {
+          destination: '/404',
+          permanent: false,
+        },
+      }
+    }
+
     return {
       props: {
         data: parsedData,
@@ -89,7 +102,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     if (!paths || paths.length === 0) throw new Error('No Categories')
     return {
       paths,
-      fallback: 'blocking', // 등록된 카테고리 외에 없을경우 404 예외처리
+      fallback: 'blocking',
     }
   } catch (e) {
     console.error(e)
