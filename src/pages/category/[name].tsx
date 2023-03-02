@@ -46,7 +46,7 @@ const CategoryPage = ({ data, blogData }: ICateory) => {
 }
 
 export const getStaticProps: GetStaticProps<ICateory> = async ({ params }) => {
-  const queryId = params?.id?.toString()
+  const queryId = params?.name?.toString()
   if (!queryId || queryId === '') return { redirect: { destination: '/', permanent: false } }
 
   const isKorean = checkKorean(queryId)
@@ -96,7 +96,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     const { category } = await initBlogInfo(databaseId)
 
     const paths = category?.options.map(({ name: cateName }) => ({
-      params: { id: cateName },
+      params: { name: cateName },
     }))
 
     if (!paths || paths.length === 0) throw new Error('No Categories')

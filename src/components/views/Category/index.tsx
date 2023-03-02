@@ -11,7 +11,6 @@ interface IBlogCategory {
 
 const Category = ({ postCount, category }: IBlogCategory) => {
   const { pathname, query } = useRouter()
-
   return (
     <aside>
       <ul className="TagWrap flex justify-start items-center border-b border-b-BLG300 dark:border-b-BLG700 ease">
@@ -24,11 +23,11 @@ const Category = ({ postCount, category }: IBlogCategory) => {
         {category?.map((item) => (
           <li
             key={item.id}
-            className={`${text.light} ${query.id === item.name ? 'TagActive' : ''} text-BLG800 TagItem text-md after:bg-BLG800 dark:after:bg-BLG200 hover:bg-BLG200 dark:hover:bg-BLG700`}
+            className={`${text.light} ${query.name === item.name ? 'TagActive' : ''} text-BLG800 TagItem text-md after:bg-BLG800 dark:after:bg-BLG200 hover:bg-BLG200 dark:hover:bg-BLG700`}
           >
             <Link href={`/category/${item.name}`}>
               {item.name}
-              {query.id === item.name && `(${postCount})`}
+              {query.name === item.name && `(${postCount})`}
             </Link>
           </li>
         ))}
