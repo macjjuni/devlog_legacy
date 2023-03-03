@@ -40,7 +40,7 @@ const SearchBar = () => {
   }, [])
 
   return (
-    <div className="SearchBar flex justify-end items-center py-[4px] mt-[10px] md:m-0">
+    <div className="SearchBar w-full md:w-[auto] flex justify-end items-center py-[4px] mt-[10px] md:m-0">
       <div className="SearchWrap relative">
         <BiSearchAlt onClick={onMouseClick} fontSize={24} className={`${text.black} absolute top-[50%] left-[4px] translate-y-[-50%] text-BLG700 cursor-pointer`} />
         <input
