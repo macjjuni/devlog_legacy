@@ -47,6 +47,7 @@ export const getStaticProps: GetStaticProps<ICateory> = async ({ params }) => {
   if (!queryId || queryId === '') return { redirect: { destination: '/devlog', permanent: false } }
 
   const keyword = queryId.substring(0, 100)
+
   try {
     const databaseId = process.env.NOTION_DATABASE_ID
     if (!databaseId) throw new Error('DATABASE_ID is not defined')

@@ -8,7 +8,7 @@ const SearchBar = () => {
   const isEvent = useRef<boolean>(true)
   const searchRef = useRef<HTMLInputElement>(null)
 
-  const { push, query } = useRouter()
+  const { push, query, pathname } = useRouter()
 
   // 검색 실행
   const onSearch = (str: string) => {
@@ -34,7 +34,8 @@ const SearchBar = () => {
 
   // 검색 키워드 인풋창에 유지
   useEffect(() => {
-    if (searchRef.current === null || query === undefined || query.name === undefined || query.name instanceof Array) return
+    if (searchRef.current === null || query === undefined || typeof query.name !== 'string' || !pathname.includes('search')) return
+
     searchRef.current.value = query.name
   }, [])
 
@@ -46,6 +47,7 @@ const SearchBar = () => {
           ref={searchRef}
           onKeyDown={onKeyEvent}
           type="text"
+          maxLength={100}
           className={`${text.black} text-md py-[5px] pl-[32px] pr-[12px] outline-none bg-BLG200 dark:bg-BLG700 w-[128px] focus:w-[180px] ease rounded-full`}
         />
       </div>
