@@ -1,5 +1,5 @@
 import { Client } from '@notionhq/client'
-import type { PageObjectResponse, DatabaseObjectResponse } from '@notionhq/client/build/src/api-endpoints'
+import type { PageObjectResponse, DatabaseObjectResponse, SearchResponse } from '@notionhq/client/build/src/api-endpoints'
 import { NotionAPI } from 'notion-client'
 
 export const propertyTable = {
@@ -23,6 +23,7 @@ export const reactNotionApi = new NotionAPI({
 
 export interface DatabaseQueryOption {
   categoryName?: string
+  title?: string
 }
 
 // 글 목록 조회
@@ -69,16 +70,17 @@ export const getPageItem = async (pageId: string) => {
 export const getSearchItems = async (query: string) => {
   const searchItems = await notion.search({
     query,
+    filter: {
+      value: 'page',
+      property: 'object',
+    },
     sort: {
       direction: 'descending',
       timestamp: 'last_edited_time',
     },
-    filter: {
-      property: 'object',
-      value: 'page',
-    },
     page_size: 12,
   })
+
   return searchItems.results as PageObjectResponse[]
 }
 
