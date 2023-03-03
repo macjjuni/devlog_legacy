@@ -46,8 +46,8 @@ export const getStaticProps: GetStaticProps<ICateory> = async ({ params }) => {
   const queryId = params?.name?.toString()
   if (!queryId || queryId === '') return { redirect: { destination: '/devlog', permanent: false } }
 
+  // 문자열 100자 까지만 허용
   const keyword = queryId.substring(0, 100)
-
   try {
     const databaseId = process.env.NOTION_DATABASE_ID
     if (!databaseId) throw new Error('DATABASE_ID is not defined')

@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: kku.dev
+Host: https://kku.dev
 
 # Sitemaps
-Sitemap: kku.dev/sitemap.xml
+Sitemap: https://kku.dev/sitemap.xml

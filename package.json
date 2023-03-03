@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
   },
@@ -25,6 +26,7 @@
     "lodash": "^4.17.21",
     "moment": "^2.29.4",
     "next": "^13.2.1",
+    "next-sitemap": "^4.0.1",
     "notion-client": "^6.16.0",
     "notion-utils": "^6.16.0",
     "nprogress": "^0.2.0",
