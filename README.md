@@ -33,9 +33,15 @@
 </div>
 <br>
 
-## 📸 Initial Screen
+## 📸 ScreenShot
 
-<img width="1508" alt="image" src="https://user-images.githubusercontent.com/38034518/218312477-cb8f8d1e-ab76-4939-9366-80d6302f1004.png">
+### Home
+
+<img width="1508" alt="image" src="https://user-images.githubusercontent.com/38034518/222895874-facfefea-09dc-4eba-a217-e0a3b8d6b30d.png">
+
+### DevLog
+
+<img width="1508" alt="image" src="https://user-images.githubusercontent.com/38034518/222895876-0743c055-e85d-47e8-b03a-66d2093eec01.png">
 
 ## 🌲 Project Tree
 
