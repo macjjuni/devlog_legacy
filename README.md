@@ -6,7 +6,7 @@
 	<img src="https://img.shields.io/badge/Next.js-000000?style=flat&logo=Next.js&logoColor=white" />
 	<img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white" />
 	<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=TypeScript&logoColor=white" />
-		<img src="https://img.shields.io/badge/Styled Components-DB7093?style=flat&logo=Styled-Components&logoColor=white" />
+	<img src="https://img.shields.io/badge/Tailwind CSS-06B6D4?style=flat&logo=Tailwind CSS&logoColor=white" />
 </div>
   
 <div align="center">
@@ -25,7 +25,7 @@
 </div>
 
 <div align="center">
-	<img src="https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=MongoDB&logoColor=white" />
+	<img src="https://img.shields.io/badge/Notion-000000?style=flat&logo=Notion&logoColor=white" />
 </div>
 
 <div align="center">
@@ -42,31 +42,33 @@
 ```
 kkusaeng's Portfolio
 │
-├─ pages            (📚) => 페이지 모음
 ├─ public           (🏛️) => 정적파일 모음
 ├─ src
-│  ├─ api           (🕸️) => API 함수 모음
 │  ├─ assets        (🏦) => 파일 리소스 모음
 │  │
 │  ├─ components    (🧩) => 컴포넌트 모음
 │  │  ├─ common     (🛞) => 기능형 컴포넌트
-│  │  └─ views      (🎨) => 레더형 컴포넌트
+│  │  └─ views      (🎨) => 렌더형 컴포넌트
 │  │
 │  ├─ hoc           (🕹️) => HOC 컴포넌트 모음
-│  ├─ hooks         (🪝) => 커스텀 훅 모음
 │  │
 │  ├─ layout        (🪟) => 레이아웃 모음
 │  │  ├─ Footer
 │  │  ├─ Header
-│  │  └─ Main
+│  │  ├─ Main
+│  │  └─ index.tsx
 │  │
-│  ├─ Redux        (🪟) => 레이아웃 모음
-│  │  ├─ slice     (🧀) => Redux Slice 모음
+│  ├─ notion        (📚) => 노션 관련 모음
+│  │
+│  ├─ pages         (📄) => 페이지 폴더
+│  │
+│  ├─ Redux         (🧀) => 리덕스
+│  │  ├─ slice
 │  │  ├─ store.ts
 │  │  └─ hook.ts
 │  │
-│  ├─ router        (🚦) => 라우팅 관련 모음
-│  ├─ styles        (🕺) => 공통 스타일 코드
+│  ├─ router        (🚦) => 페이지 경로 코드
+│  ├─ styles        (🕺) => 스타일 코드 모음
 │  │
 │  ├─ type          (🎲) => TS 타입 모음
 │  └─ utils         (🛠️) => 유틸 함수 모음
