@@ -2,10 +2,10 @@ import type { GetStaticPaths, GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
 import type { ExtendedRecordMap } from 'notion-types'
 import { getPageTitle } from 'notion-utils'
-import { getHeadDescription } from '@/utils/getHeadDescription'
+import { getHeadDescription } from '@/notion/utils/getHeadDescription'
 import PageHead from '@/components/common/PageHead'
 import NotionRender from '@/components/common/NotionRender'
-import { getCachedDatabaseItems } from '@/utils/getCachedDatabaseItems'
+import { getCachedDatabaseItems } from '@/notion/utils/getCachedDatabaseItems'
 import { getPageContent } from '@/notion/notion'
 
 interface IDetailsPage {

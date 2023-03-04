@@ -1,4 +1,4 @@
-import { getDatabaseItems } from '../notion/notion'
+import { getDatabaseItems } from '../notion'
 import { IDevLogData } from '@/types/types'
 
 const siteURL = process.env.SITE_URL || 'http://kku.dev'
