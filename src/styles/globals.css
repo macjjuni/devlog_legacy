@@ -180,10 +180,6 @@ body {
   z-index: 0;
 }
 
-.SNSLink {
-  position: relative;
-}
-
 .SNSLink::after {
   content: '';
   position: absolute;
@@ -191,9 +187,16 @@ body {
   right: 6px;
   width: 8px;
   height: 8px;
-  background-color: #04cf52;
   border-radius: 50%;
   animation: blinkEffect 0.95s ease-in-out infinite alternate;
+}
+
+.sns-active::after {
+  background-color: #04cf52;
+}
+
+.sns-warning::after {
+  background-color: #ffab49;
 }
 
 @keyframes blinkEffect {
