@@ -161,7 +161,7 @@ pre[class*='language-'] {
   white-space: pre-wrap;
   word-wrap: normal;
   font-family: Menlo, Monaco, 'Courier New', monospace;
-  font-size: 24px;
+  font-size: 14px;
   color: #76d9e6;
   text-shadow: none;
 }
@@ -176,7 +176,7 @@ pre[class*='language-'] {
 }
 
 .dark pre[class*='language-'] {
-  padding: 15px;
+  padding: 24px;
   border-radius: 4px;
   overflow: auto;
   position: relative;
