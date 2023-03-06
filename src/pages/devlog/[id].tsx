@@ -5,6 +5,7 @@ import { getPageTitle } from 'notion-utils'
 import { getHeadDescription } from '@/notion/utils/getHeadDescription'
 import PageHead from '@/components/common/PageHead'
 import NotionRender from '@/components/common/NotionRender'
+import NotionSkeleton from '@/components/views/NotionSkeleton'
 import { getCachedDatabaseItems } from '@/notion/utils/getCachedDatabaseItems'
 import { getPageContent } from '@/notion/notion'
 
@@ -17,7 +18,7 @@ const DetailsPage = ({ recordMap }: IDetailsPage) => {
   const pageTitle = recordMap ? getPageTitle(recordMap) : ''
   const description = recordMap ? getHeadDescription(recordMap) : ''
 
-  if (isFallback) return <>Loading...</>
+  if (isFallback) return <NotionSkeleton />
 
   return (
     <>
