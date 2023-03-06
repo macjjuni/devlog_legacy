@@ -55,10 +55,6 @@ body {
   transition: background 0.3s ease;
 }
 
-.header-bs {
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-}
-
 .dark:is(html, body) {
   background-color: #202020;
 }
