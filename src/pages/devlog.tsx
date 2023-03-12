@@ -49,7 +49,7 @@ export const getStaticProps: GetStaticProps<IDevLog> = async () => {
         data: parsedData,
         blogData,
       },
-      revalidate: 60 * 5,
+      revalidate: 60,
     }
   } catch (e) {
     console.error(e)
