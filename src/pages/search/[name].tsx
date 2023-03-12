@@ -55,7 +55,9 @@ export const getStaticProps: GetStaticProps<ICateory> = async ({ params }) => {
     const searchItems = await getSearchItems(keyword)
     // 다른 노션 페이지 삭제
     const filteredItems = searchItems.filter((res) => res.parent.type === 'database_id')
-    const parsedData = parseDatabaseItems(filteredItems)
+    const openItems = filteredItems.filter((item) => item.properties['상태'].type === 'status' && item.properties['상태'].status?.name === '공개')
+
+    const parsedData = parseDatabaseItems(openItems)
     const blogData = await initBlogInfo(databaseId)
 
     return {
