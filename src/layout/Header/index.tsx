@@ -40,7 +40,7 @@ const Header = () => {
               <li key={page.id} className="fcc relative select-none">
                 <Link
                   href={page.path}
-                  className={`NavLink ${pathname === page.path ? 'active' : ''} ${page.path !== '/' ? (pathname.includes('devlog') ? 'active' : '') : ''} 
+                  className={`NavLink ${pathname === page.path ? 'active' : ''} ${page.path !== '/' ? (pathname.includes('blog') ? 'active' : '') : ''} 
                 ${text.black} md:text-head_sm text-xl fwb italic p-sm after:bg-BLG1000 after:h-[2px] md:after:h-[3px] dark:after:bg-BLG0`}
                 >
                   {page.title}

@@ -9,11 +9,11 @@ import Banner from '@/components/views/Banner'
 import PostList from '@/components/views/PostList'
 import Category from '@/components/views/Category'
 import Pagination from '@/components/views/Pagination'
-import type { IBlogData, IDevLogData } from '@/types/types'
+import type { IPosts, IBlogInfo } from '@/types/types'
 
 interface ICateory {
-  data: IDevLogData[]
-  blogData: IBlogData
+  data: IPosts[]
+  blogData: IBlogInfo
 }
 
 const CategoryPage = ({ data, blogData }: ICateory) => {
@@ -34,7 +34,7 @@ const CategoryPage = ({ data, blogData }: ICateory) => {
   return (
     <section>
       <Banner data={blogData} />
-      <PageHead subTitle="DevLog" />
+      <PageHead subTitle="Blog" />
       <Category postCount={postCount} category={blogData?.category?.options} />
       <PostList data={postData} />
       <Pagination current={currentPage} total={postCount} />
@@ -44,7 +44,7 @@ const CategoryPage = ({ data, blogData }: ICateory) => {
 
 export const getStaticProps: GetStaticProps<ICateory> = async ({ params }) => {
   const queryId = params?.name?.toString()
-  if (!queryId || queryId === '') return { redirect: { destination: '/devlog', permanent: false } }
+  if (!queryId || queryId === '') return { redirect: { destination: '/blog', permanent: false } }
 
   // 문자열 100자 까지만 허용
   const keyword = queryId.substring(0, 100)

@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import { text } from '@/styles/global'
 import NoPost from '@/components/views/NoPost'
-import type { IDevLogData } from '@/types/types'
+import type { IPosts } from '@/types/types'
 
 interface IPostList {
-  data: IDevLogData[]
+  data: IPosts[]
 }
 
 const PostList = ({ data }: IPostList) => {
@@ -12,7 +12,7 @@ const PostList = ({ data }: IPostList) => {
     <ul className="flex justify-start flex-col">
       {data.map((post) => (
         <li key={post.id} className="block border-b border-solid border-BG_0 py-xlg md:px-sm">
-          <Link href={`/devlog/${post.id}`} className="flex flex-col justify-start w-full">
+          <Link href={`/blog/${post.id}`} className="flex flex-col justify-start w-full">
             <p className="text-md text-primary fwb">{post.category?.name}</p>
             <h2 className={`text-head_sm ${text.normal} fwb whitespace-nowrap truncate`}>{post.title}</h2>
             <p className="text-sm text-BLG500">{post.published.substring(0, 10)}</p>

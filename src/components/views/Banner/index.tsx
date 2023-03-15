@@ -1,12 +1,12 @@
 import { useState, memo } from 'react'
 import Image from 'next/image'
 import Skeleton from './components/Skeleton'
-import type { IBlogData } from '@/types/types'
+import type { IBlogInfo } from '@/types/types'
 import { text } from '@/styles/global'
 import SNSList from '../SNSList'
 import SearchBar from '@/components/views/SearchBar'
 
-const Banner = ({ data }: { data: IBlogData }) => {
+const Banner = ({ data }: { data: IBlogInfo }) => {
   const [isLoad, setLoad] = useState(false)
   const onLoadImage = () => {
     setLoad(true)

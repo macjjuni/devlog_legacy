@@ -1,4 +1,4 @@
-# [kkusaeng's DevLog [Link]](https://kku.dev/)
+# [kkusaeng's Blog [Link]](https://kku.dev/)
 
 <br>
 
@@ -39,7 +39,7 @@
 
 <img width="1508" alt="image" src="https://user-images.githubusercontent.com/38034518/222895874-facfefea-09dc-4eba-a217-e0a3b8d6b30d.png">
 
-### DevLog
+### Blog
 
 <img width="1508" alt="image" src="https://user-images.githubusercontent.com/38034518/222895876-0743c055-e85d-47e8-b03a-66d2093eec01.png">
 

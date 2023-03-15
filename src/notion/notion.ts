@@ -1,5 +1,5 @@
 import { Client } from '@notionhq/client'
-import type { PageObjectResponse, DatabaseObjectResponse, SearchResponse } from '@notionhq/client/build/src/api-endpoints'
+import type { PageObjectResponse, DatabaseObjectResponse } from '@notionhq/client/build/src/api-endpoints'
 import { NotionAPI } from 'notion-client'
 
 export const propertyTable = {

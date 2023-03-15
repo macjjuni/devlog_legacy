@@ -1,4 +1,4 @@
-import type { GetStaticPaths, GetStaticProps, GetServerSideProps } from 'next'
+import type { GetStaticPaths, GetStaticProps } from 'next'
 // import type { GetServerSideProps } from 'next'
 import { useRouter } from 'next/router'
 import type { ExtendedRecordMap } from 'notion-types'

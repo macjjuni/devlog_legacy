@@ -10,14 +10,14 @@ import Banner from '@/components/views/Banner'
 import PostList from '@/components/views/PostList'
 import Category from '@/components/views/Category'
 import Pagination from '@/components/views/Pagination'
-import type { IDevLogData, IBlogData } from '@/types/types'
+import type { IBlogInfo, IPosts } from '@/types/types'
 
-interface IDevLog {
-  data: IDevLogData[]
-  blogData: IBlogData
+interface IBlog {
+  data: IPosts[]
+  blogData: IBlogInfo
 }
 
-const Devlog = ({ data, blogData }: IDevLog) => {
+const Blog = ({ data, blogData }: IBlog) => {
   const { query } = useRouter()
   const currentPage = query.page ? parseInt(query.page.toString(), 10) : 1
   const [postData, setPostData] = useState(data.slice(POSTS_PER_PAGE * (currentPage - 1), POSTS_PER_PAGE * currentPage))
@@ -28,7 +28,7 @@ const Devlog = ({ data, blogData }: IDevLog) => {
   }, [currentPage, data])
   return (
     <section className="">
-      <PageHead subTitle="DevLog" />
+      <PageHead subTitle="Blog" />
       <Banner data={blogData} />
       <Category postCount={postCount} category={blogData?.category?.options} />
       <PostList data={postData} />
@@ -37,7 +37,7 @@ const Devlog = ({ data, blogData }: IDevLog) => {
   )
 }
 
-export const getStaticProps: GetStaticProps<IDevLog> = async () => {
+export const getStaticProps: GetStaticProps<IBlog> = async () => {
   const databaseId = process.env.NOTION_DATABASE_ID
   try {
     if (!databaseId) throw new Error('DATABASE_ID is not defined')
@@ -59,4 +59,4 @@ export const getStaticProps: GetStaticProps<IDevLog> = async () => {
   }
 }
 
-export default Devlog
+export default Blog

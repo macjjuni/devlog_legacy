@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
-const DEFAULT_TITLE = process.env.NEXT_PUBLIC_HEAD_TITLE || '꾸생의 Devlog'
+const DEFAULT_TITLE = process.env.NEXT_PUBLIC_HEAD_TITLE || '꾸생 블로그'
 const DEFAULT_SITE_URL = process.env.SITE_URL || 'https://kku.dev'
-const DEFAULT_DESCRIPTION = process.env.DESCRIPTION || '프론트엔드, 백엔드 개발 지식을 기록하는 블로그입니다.'
+const DEFAULT_DESCRIPTION = process.env.DESCRIPTION || '개발부터 인생을 기록하는 블로그입니다.'
 
 interface IPageHead {
   subTitle?: string

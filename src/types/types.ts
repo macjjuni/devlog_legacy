@@ -21,7 +21,7 @@ export type IIcon =
     }
   | null
 
-export interface IDevLogData {
+export interface IPosts {
   id: string
   cover: string
   title: string
@@ -36,7 +36,7 @@ export interface ITag {
   color: keyof typeof COLOR_TABLE
 }
 
-export interface IBlogData {
+export interface IBlogInfo {
   title: string
   description: string
   coverURL: string
