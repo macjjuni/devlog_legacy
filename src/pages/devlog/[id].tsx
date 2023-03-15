@@ -1,4 +1,5 @@
-import type { GetStaticPaths, GetStaticProps } from 'next'
+// import type { GetStaticPaths, GetStaticProps, GetServerSideProps } from 'next'
+import type { GetServerSideProps } from 'next'
 import { useRouter } from 'next/router'
 import type { ExtendedRecordMap } from 'notion-types'
 import { getPageTitle } from 'notion-utils'
@@ -6,7 +7,7 @@ import { getHeadDescription } from '@/notion/utils/getHeadDescription'
 import PageHead from '@/components/common/PageHead'
 import NotionRender from '@/components/common/NotionRender'
 import NotionSkeleton from '@/components/views/NotionSkeleton'
-import { getCachedDatabaseItems } from '@/notion/utils/getCachedDatabaseItems'
+// import { getCachedDatabaseItems } from '@/notion/utils/getCachedDatabaseItems'
 import { getPageContent } from '@/notion/notion'
 
 interface IDetailsPage {
@@ -28,14 +29,15 @@ const DetailsPage = ({ recordMap }: IDetailsPage) => {
   )
 }
 
-export const getStaticProps: GetStaticProps<IDetailsPage> = async ({ params }) => {
+// export const getStaticProps: GetStaticProps<IDetailsPage> = async ({ params }) => {
+export const getServerSideProps: GetServerSideProps<IDetailsPage> = async ({ params }) => {
   const id = params?.id
   try {
     if (!id) throw Error('id is not defined')
     const recordMap = await getPageContent(id.toString())
     return {
       props: { recordMap },
-      revalidate: 60,
+      // revalidate: 60,
     }
   } catch (e) {
     console.error(e)
@@ -43,18 +45,18 @@ export const getStaticProps: GetStaticProps<IDetailsPage> = async ({ params }) =
   }
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const databaseId = process.env.NOTION_DATABASE_ID
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   const databaseId = process.env.NOTION_DATABASE_ID
 
-  if (!databaseId) throw new Error('DATABASE_ID is not defined')
-  const databaseItems = await getCachedDatabaseItems(databaseId)
-  const paths = databaseItems.map(({ id }) => ({
-    params: { id },
-  }))
-  return {
-    paths,
-    fallback: true,
-  }
-}
+//   if (!databaseId) throw new Error('DATABASE_ID is not defined')
+//   const databaseItems = await getCachedDatabaseItems(databaseId)
+//   const paths = databaseItems.map(({ id }) => ({
+//     params: { id },
+//   }))
+//   return {
+//     paths,
+//     fallback: true,
+//   }
+// }
 
 export default DetailsPage

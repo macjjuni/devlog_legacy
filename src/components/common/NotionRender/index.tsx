@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic'
+import Link from 'next/link'
 import { ExtendedRecordMap } from 'notion-types'
 import { defaultMapImageUrl, NotionRenderer } from 'react-notion-x'
 import { useAppSelector } from '@/redux/hook'
@@ -37,6 +38,7 @@ const NotionRender = ({ recordMap }: NotionPageRendererProps) => {
       components={{
         // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-return
         propertyDateValue: (dateProperty) => dateProperty.data[0][1][0][1].start_date,
+        nextLink: Link,
         Code,
         Collection,
         Equation,
