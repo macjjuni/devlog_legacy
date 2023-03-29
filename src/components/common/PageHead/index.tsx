@@ -28,7 +28,7 @@ const PageHead = ({ subTitle, description }: IPageHead) => {
       <meta property="og:type" content="website" />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={fullDescription} />
-      <meta property="og:image" content={`${DEFAULT_SITE_URL}/image/cover.png`} />
+      <meta property="og:image" content={`${DEFAULT_SITE_URL}/images/cover.png`} />
       {/* Twitter Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta property="twitter:domain" content={DEFAULT_SITE_URL} />
