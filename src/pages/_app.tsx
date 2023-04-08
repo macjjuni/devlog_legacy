@@ -3,6 +3,7 @@ import '@/styles/notionStyle.scss'
 import '@/styles/notion.default.css'
 import '@/styles/prism.css'
 import '@/styles/globals.css'
+import '@/styles/nprogress.css'
 
 import type { AppProps } from 'next/app'
 import { Provider } from 'react-redux'
