@@ -4,9 +4,9 @@ import NProgress from 'nprogress'
 
 const options = {
   minimum: 0.1,
-  speed: 100,
+  speed: 180,
   easing: '',
-  trickle: false,
+  trickle: true,
   showSpinner: false,
   template: '<div class="bar" role="bar"></div></div>',
 }
