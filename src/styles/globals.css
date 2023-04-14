@@ -5,6 +5,13 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css');
 
 @font-face {
+  font-family: 'SF Mono Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('SF Mono Regular'), url('/src/assets/font/SFMono/SFMonoRegular.woff') format('woff');
+}
+
+@font-face {
   font-family: 'NanumBarunGothic';
   font-style: normal;
   font-weight: 400;

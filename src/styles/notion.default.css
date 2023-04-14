@@ -162,7 +162,7 @@
 
 .notion-aside-table-of-contents .notion-table-of-contents-item {
   line-height: 1;
-  padding: 8px 0;
+  padding: 8px 6px;
 }
 
 .notion-aside-table-of-contents .notion-table-of-contents-item-indent-level-0:first-of-type {
@@ -789,6 +789,7 @@ svg.notion-page-icon {
 
 .notion .notion-code {
   font-size: 85%;
+  transition: 0.3s ease;
 }
 
 .notion-code {
@@ -1673,6 +1674,7 @@ svg.notion-page-icon {
 
   padding: 6px;
   font-size: 14px;
+  font-weight: bold;
   line-height: 1.3;
   display: flex;
   align-items: center;
