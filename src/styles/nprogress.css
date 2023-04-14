@@ -1,19 +1,19 @@
 /* Make clicks pass-through */
 #nprogress {
   pointer-events: none;
-  height: 2px;
-  overflow: hidden !important;
+  position: relative;
+  z-index: 9999999;
 }
 
 #nprogress .bar {
-  background: #29d;
+  background: #ee5253;
 
   position: fixed;
-  z-index: 1031;
-  top: 0;
+  z-index: 9999;
+  top: 0px;
   left: 0;
 
   width: 100%;
-  height: 2px;
+  height: 3px;
   overflow: hidden;
 }

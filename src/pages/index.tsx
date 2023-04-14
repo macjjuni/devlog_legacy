@@ -16,7 +16,7 @@ const Home = () => {
           <h2 className={CName}>
             안녕하세요? 👋
             <br />
-            이것저것 만들기 좋아하는 <span className="fwb text-primary">꾸생</span>입니다.
+            프론트엔드 개발자 <span className="fwb text-primary">꾸생</span>입니다.
           </h2>
 
           <h2 className={CName}>

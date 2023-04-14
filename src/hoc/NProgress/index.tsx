@@ -1,16 +1,17 @@
 import { ReactNode, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/router'
 import NProgress from 'nprogress'
-import 'nprogress/nprogress.css'
 
 const options = {
-  speed: 200,
-  height: '4px',
+  minimum: 0.1,
+  speed: 100,
+  easing: '',
+  trickle: false,
   showSpinner: false,
-  color: '#33A1FF',
+  template: '<div class="bar" role="bar"></div></div>',
 }
 
-NProgress.configure({ speed: options.speed, showSpinner: options.showSpinner })
+NProgress.configure(options)
 
 const WithNProgress = ({ children }: { children: ReactNode }) => {
   const { events } = useRouter()
@@ -33,20 +34,7 @@ const WithNProgress = ({ children }: { children: ReactNode }) => {
     }
   }, [])
 
-  return (
-    <>
-      <style jsx global>
-        {`
-          #nprogress .bar {
-            height: ${options.height};
-            background: ${options.color};
-            z-index: 9999;
-          }
-        `}
-      </style>
-      {children}
-    </>
-  )
+  return <>{children}</>
 }
 
 export default WithNProgress
