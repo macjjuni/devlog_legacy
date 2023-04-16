@@ -45,8 +45,8 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'RidiBatang', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  overflow-y: auto;
-  overflow-x: hidden;
+  /* overflow-y: auto;
+  overflow-x: hidden; */
   transition: background 0.3s ease;
 }
 

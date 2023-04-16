@@ -789,7 +789,7 @@ svg.notion-page-icon {
 
 .notion .notion-code {
   font-size: 85%;
-  transition: 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .notion-code {
