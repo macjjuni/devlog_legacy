@@ -46,6 +46,8 @@
 }
 
 .notion-table-of-contents > a > span {
+  position: relative;
+  top: 3px;
   display: block;
   white-space: nowrap;
   text-overflow: ellipsis;
