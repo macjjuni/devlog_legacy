@@ -15,15 +15,13 @@ const Category = ({ postCount, category }: IBlogCategory) => {
     <aside>
       <ul className="TagWrap flex justify-start items-center border-b border-b-BLG300 dark:border-b-BLG700 ease">
         <li className={`${text.light} ${pathname === '/blog' ? 'TagActive' : ''} TagItem text-lg after:bg-BLG800 dark:after:bg-BLG200 hover:bg-BLG200 dark:hover:bg-BLG700`}>
-          <Link href="/blog" className="fcc gap-1">
-            <BsFillGridFill />
-            All{pathname === '/blog' && `(${postCount})`}
-          </Link>
+          <BsFillGridFill />
+          <Link href="/blog">All{pathname === '/blog' && `(${postCount})`}</Link>
         </li>
         {category?.map((item) => (
           <li
             key={item.id}
-            className={`${text.light} ${query.name === item.name ? 'TagActive' : ''} text-BLG800 TagItem text-md after:bg-BLG800 dark:after:bg-BLG200 hover:bg-BLG200 dark:hover:bg-BLG700`}
+            className={`${text.light} ${query.name === item.name ? 'TagActive' : ''} text-BLG800 TagItem text-lg after:bg-BLG800 dark:after:bg-BLG200 hover:bg-BLG200 dark:hover:bg-BLG700`}
           >
             <Link href={`/category/${item.name}`}>
               {item.name}
