@@ -14,9 +14,9 @@ const Category = ({ postCount, category }: IBlogCategory) => {
   return (
     <aside>
       <ul className="TagWrap flex justify-start items-center border-b border-b-BLG300 dark:border-b-BLG700 ease">
-        <li className={`${text.light} ${pathname === '/blog' ? 'TagActive' : ''} TagItem text-lg after:bg-BLG800 dark:after:bg-BLG200 hover:bg-BLG200 dark:hover:bg-BLG700`}>
+        <li className={`${text.light} ${pathname === '/blog' ? 'TagActive' : ''} TagItem gap-2 text-lg after:bg-BLG800 dark:after:bg-BLG200 hover:bg-BLG200 dark:hover:bg-BLG700`}>
           <BsFillGridFill />
-          <Link href="/blog">All{pathname === '/blog' && `(${postCount})`}</Link>
+          <Link href="/blog">전체{pathname === '/blog' && `(${postCount})`}</Link>
         </li>
         {category?.map((item) => (
           <li

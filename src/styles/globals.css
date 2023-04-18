@@ -224,7 +224,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 6px;
   padding: 2px 8px;
   position: relative;
   border-radius: 4px;
@@ -235,7 +234,7 @@ body {
 }
 .TagItem > a {
   position: relative;
-  top: 2px;
+  top: 1px;
 }
 
 @keyframes slowUp {
