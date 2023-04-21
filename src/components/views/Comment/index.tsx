@@ -11,7 +11,7 @@ const Comment = () => {
     scriptEl.async = true
     scriptEl.crossOrigin = 'anonymous'
     scriptEl.setAttribute('repo', 'macjjuni/kku.dev-comment')
-    scriptEl.setAttribute('issue-term', 'pathname')
+    scriptEl.setAttribute('issue-term', 'url')
     // scriptEl.setAttribute('theme', `github-${commentsTheme}`);
     scriptEl.setAttribute('label', '💬 Discussion')
 
