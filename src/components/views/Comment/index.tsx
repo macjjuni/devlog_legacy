@@ -1,5 +1,7 @@
 import { useLayoutEffect, useRef } from 'react'
 
+// utterances 사용
+
 const Comment = () => {
   const commentRef = useRef<HTMLElement | null>(null)
 
