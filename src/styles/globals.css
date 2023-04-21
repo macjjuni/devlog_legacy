@@ -269,3 +269,7 @@ body {
 .skeleton-bar {
   animation: skeletonEffect 1s infinite;
 }
+
+.utterances {
+  margin: 0 !important;
+}

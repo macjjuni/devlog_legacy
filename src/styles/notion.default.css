@@ -602,7 +602,6 @@ svg.notion-page-icon {
 .notion-page {
   box-sizing: border-box;
   width: var(--notion-max-width);
-  padding-bottom: 48px;
 }
 
 .notion-small-text {

@@ -1,6 +1,4 @@
 import type { GetStaticPaths, GetStaticProps } from 'next'
-// import dynamic from 'next/dynamic'
-// import type { GetServerSideProps } from 'next'
 import { useRouter } from 'next/router'
 import type { ExtendedRecordMap } from 'notion-types'
 import { getPageTitle } from 'notion-utils'
@@ -16,11 +14,6 @@ interface IDetailsPage {
   recordMap: ExtendedRecordMap
 }
 
-// const NoSsrComment = dynamic(() => import('@/components/views/Comment'), {
-//   loading: () => <p>Loading...</p>,
-//   ssr: false,
-// })
-
 const DetailsPage = ({ recordMap }: IDetailsPage) => {
   const { isFallback } = useRouter()
   const pageTitle = recordMap ? getPageTitle(recordMap) : ''
@@ -32,7 +25,6 @@ const DetailsPage = ({ recordMap }: IDetailsPage) => {
     <>
       <PageHead subTitle={pageTitle} description={description === '' ? pageTitle : description} />
       <NotionRender recordMap={recordMap} />
-      {/* <NoSsrComment /> */}
       <Comment />
     </>
   )

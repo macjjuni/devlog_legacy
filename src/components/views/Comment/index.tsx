@@ -16,6 +16,6 @@ const Comment = () => {
     commentRef.current?.appendChild(scriptEl)
   }, [])
 
-  return <section ref={commentRef} />
+  return <section className="flex justify-start items-center" ref={commentRef} />
 }
 export default Comment
