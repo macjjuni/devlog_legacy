@@ -1,11 +1,12 @@
-import { useLayoutEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 
 // utterances 사용
+// 개발 모드때 2개 씩 렌더링 되는데, 관련 함수 만들어서 추가할 예정이고 다크모드도 적용해야함
 
 const Comment = () => {
   const commentRef = useRef<HTMLElement | null>(null)
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const scriptEl = document.createElement('script')
     scriptEl.src = 'https://utteranc.es/client.js'
     scriptEl.async = true
@@ -17,6 +18,7 @@ const Comment = () => {
 
     commentRef.current?.appendChild(scriptEl)
   }, [])
+  //
 
   return (
     <>
