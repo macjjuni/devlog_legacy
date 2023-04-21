@@ -51,7 +51,7 @@ const SearchBar = () => {
           onKeyDown={onKeyEvent}
           type="text"
           maxLength={100}
-          className={`${text.black} text-md py-[5px] pl-[36px] pr-[12px] outline-none bg-BLG200 dark:bg-BLG700 w-[128px] focus:w-[180px] ease rounded-full`}
+          className={`${text.black} text-md py-[5px] pl-[36px] pr-[12px] outline-none bg-BLG200 dark:bg-BLG700 w-[128px] focus:w-[180px] ease rounded-full basic`}
         />
       </div>
     </div>
