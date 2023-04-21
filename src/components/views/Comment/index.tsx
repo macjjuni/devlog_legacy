@@ -16,6 +16,12 @@ const Comment = () => {
     commentRef.current?.appendChild(scriptEl)
   }, [])
 
-  return <section className="flex justify-start items-center" ref={commentRef} />
+  return (
+    <>
+      <section className="flex justify-start items-center flex-row-reverse" ref={commentRef}>
+        <div className="block hidden lg:block max-w-[280px] min-w-[280px] w-[280px]" />
+      </section>
+    </>
+  )
 }
 export default Comment
