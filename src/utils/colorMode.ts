@@ -1,4 +1,4 @@
-type ThemeTypes = 'dark' | 'light' | null
+export type ThemeTypes = 'dark' | 'light' | null
 
 export const getColorMode = () => {
   // 현재 저장된 컬러모드 가져오기
