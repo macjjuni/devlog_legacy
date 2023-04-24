@@ -20,7 +20,7 @@ const Mail = () => {
 
   const clickCopy = async () => {
     const isSuccess = await textCopy(EMAIL)
-    if (isSuccess && !isShow) setCopy(true)
+    if (isSuccess) setCopy(true)
   }
 
   const onEnter = () => {
