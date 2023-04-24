@@ -1,23 +1,26 @@
 import { useEffect, useRef } from 'react'
-
+import { useAppSelector } from '@/redux/hook'
+import { appendUtter, isContainUtter, removeUtter } from '@/utils/utterances'
 // utterances 사용
-// 개발 모드때 2개 씩 렌더링 되는데, 관련 함수 만들어서 추가할 예정이고 다크모드도 적용해야함
 
 const Comment = () => {
+  const { theme } = useAppSelector((state) => state.theme)
   const commentRef = useRef<HTMLElement | null>(null)
 
   useEffect(() => {
-    const scriptEl = document.createElement('script')
-    scriptEl.src = 'https://utteranc.es/client.js'
-    scriptEl.async = true
-    scriptEl.crossOrigin = 'anonymous'
-    scriptEl.setAttribute('repo', 'macjjuni/kku.dev-comment')
-    scriptEl.setAttribute('issue-term', 'url')
-    // scriptEl.setAttribute('theme', `github-${commentsTheme}`);
-    scriptEl.setAttribute('label', '💬 Discussion')
+    const commentDom = commentRef.current
+    if (!commentDom || theme === null) return
 
-    commentRef.current?.appendChild(scriptEl)
-  }, [])
+    const isContain = isContainUtter(commentDom)
+    if (isContain) {
+      // 렌더링 된 경우
+      removeUtter(commentDom)
+      appendUtter(commentDom, theme)
+    } else {
+      // 아직 렌더링 안 된 경우
+      appendUtter(commentDom, theme)
+    }
+  }, [theme])
   //
 
   return (
