@@ -15,20 +15,33 @@ const defaultOption = {
 }
 
 const Mail = () => {
-  const [isMail, setMail] = useState<boolean>(false)
+  const [isShow, setShow] = useState<boolean>(false)
+  const [isCopy, setCopy] = useState<boolean>(false) // 복사 성공 여부
+
   const clickCopy = async () => {
     const isSuccess = await textCopy(EMAIL)
-    if (isSuccess && !isMail) setMail(true)
+    if (isSuccess && !isShow) setCopy(true)
+  }
+
+  const onEnter = () => {
+    setShow(true)
+  }
+
+  const onLeave = () => {
+    setTimeout(() => {
+      setCopy(false) // 복사완료 여부
+      setShow(false) // 툴팁 렌더링 여부
+    }, 200)
   }
 
   return (
     <div className="relative flex justify-end items-center mt-[22px] w-full pointer sm:justify-start">
-      <button type="button" onClick={clickCopy} onTouchStart={clickCopy} className="flex justify-start items-center gap-2 relative">
+      <button type="button" onClick={clickCopy} onMouseEnter={onEnter} onMouseLeave={onLeave} className="flex justify-start items-center gap-2 relative">
         <LottieItem className="ml-[-6px]" defaultOption={defaultOption} animationData={errorLottie} />
         <h3 title="Copied Email" className={`relative top-[-2px] text-md ${text.black} hover:underline underline-offset-4`}>
           {EMAIL}
         </h3>
-        <Tooltip value={isMail} setValue={setMail} />
+        <Tooltip isShow={isShow} isCopy={isCopy} />
       </button>
     </div>
   )
