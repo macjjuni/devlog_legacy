@@ -22,7 +22,7 @@ const NotionRender = ({ recordMap }: NotionPageRendererProps) => {
 
   useEffect(() => {
     const tocDom = document.getElementsByClassName('notion-aside-table-of-contents-header')[0] as HTMLElement
-    if (tocDom !== null) tocDom.textContent = '📋 목차'
+    if (tocDom) tocDom.textContent = '📋 목차'
   }, [])
 
   // iframe lazy loading 때문에 지연 후 스크롤 이동
