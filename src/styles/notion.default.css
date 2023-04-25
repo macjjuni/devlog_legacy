@@ -1700,10 +1700,6 @@ svg.notion-page-icon {
   opacity: 1;
 }
 
-.notion-table-of-contents-item-body {
-  border-bottom: 1px solid var(--fg-color-1);
-}
-
 .notion-to-do {
   width: 100%;
   display: flex;

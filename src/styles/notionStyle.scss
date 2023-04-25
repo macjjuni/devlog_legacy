@@ -45,7 +45,7 @@
   border-radius: 2px;
 }
 
-.notion-table-of-contents > a > span {
+.notion-table-of-contents-item-body {
   position: relative;
   top: 3px;
   display: block;
@@ -54,6 +54,7 @@
   overflow: hidden;
   font-size: 16px;
 }
+
 .medium-zoom--opened {
   position: relative;
   overflow: hidden;
@@ -116,7 +117,7 @@
     width: 100%;
   }
 
-  .notion-table-of-contents > a > span {
+  .notion-table-of-contents-item-body {
     font-size: 18px;
   }
   .notion-aside-table-of-contents {
