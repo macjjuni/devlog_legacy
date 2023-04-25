@@ -387,7 +387,7 @@
 }
 
 .notion-h1 {
-  font-size: 1.875em;
+  font-size: 1.75em;
   margin-top: 1.08em;
 }
 
@@ -419,16 +419,25 @@
 }
 
 .notion-h:hover .notion-hash-link {
+  width: auto;
   opacity: 1;
 }
 
 .notion-hash-link {
+  width: 0;
   opacity: 0;
   text-decoration: none;
-  float: left;
+  margin: 0 5px 10px 0;
+  /* float: left;
   margin-left: -20px;
-  padding-right: 4px;
+  padding-right: 4px; */
+  transition: width 0.3s ease;
   fill: var(--fg-color-icon);
+}
+
+.notion-hash-link > svg {
+  width: 20px;
+  height: 20px;
 }
 
 .notion-page-cover {
