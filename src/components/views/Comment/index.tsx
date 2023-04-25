@@ -24,11 +24,9 @@ const Comment = () => {
   //
 
   return (
-    <>
-      <section id="kku-detail-comment" className="flex justify-start items-center flex-row-reverse" ref={commentRef}>
-        <div className="block hidden lg:block max-w-[280px] min-w-[280px] w-[280px]" />
-      </section>
-    </>
+    <section id="kku-detail-comment" className="flex justify-start items-center flex-row-reverse" ref={commentRef}>
+      <div className="block hidden lg:block max-w-[280px] min-w-[280px] w-[280px]" />
+    </section>
   )
 }
 export default Comment

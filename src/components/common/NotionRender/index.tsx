@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -17,12 +17,23 @@ interface NotionPageRendererProps {
 }
 
 const NotionRender = ({ recordMap }: NotionPageRendererProps) => {
+  const commentBtn = useRef(null)
   const { theme } = useAppSelector((state) => state.theme)
 
   useEffect(() => {
     const tocDom = document.getElementsByClassName('notion-aside-table-of-contents-header')[0] as HTMLElement
     if (tocDom !== null) tocDom.textContent = '📋 목차'
   }, [])
+
+  // iframe lazy loading 때문에 지연 후 스크롤 이동
+  const onComment = () => {
+    if (commentBtn.current === null) return
+    const target = commentBtn.current as HTMLAnchorElement
+    const top = document.body.scrollHeight - target.getBoundingClientRect().top
+    setTimeout(() => {
+      window.scroll({ top, behavior: 'smooth' })
+    }, 1000)
+  }
 
   return (
     <NotionRenderer
@@ -37,7 +48,7 @@ const NotionRender = ({ recordMap }: NotionPageRendererProps) => {
       // TOC에 댓글 추가
       pageAside={
         <div className="px-[8px]">
-          <a href="#kku-detail-comment" className="notion-table-of-contents-item notion-table-of-contents-item-indent-level-0 p-[8px]">
+          <a href="#kku-detail-comment" ref={commentBtn} onClick={onComment} className="notion-table-of-contents-item notion-table-of-contents-item-indent-level-0 p-[8px]">
             <span className="notion-table-of-contents-item-body">💬 댓글</span>
           </a>
         </div>
