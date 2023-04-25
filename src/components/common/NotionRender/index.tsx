@@ -47,7 +47,7 @@ const NotionRender = ({ recordMap }: NotionPageRendererProps) => {
       previewImages={!!recordMap?.preview_images}
       // TOC에 댓글 추가
       pageAside={
-        <div className="px-[8px]">
+        <div className="px-[8px] w-full">
           <a href="#kku-detail-comment" ref={commentBtn} onClick={onComment} className="notion-table-of-contents-item notion-table-of-contents-item-indent-level-0 p-[8px]">
             <span className="notion-table-of-contents-item-body">💬 댓글</span>
           </a>
