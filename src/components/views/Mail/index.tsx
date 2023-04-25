@@ -15,9 +15,10 @@ const defaultOption = {
 }
 
 const Mail = () => {
-  const [isShow, setShow] = useState<boolean>(false)
+  const [isShow, setShow] = useState<boolean>(false) // 렌더링 state
   const [isCopy, setCopy] = useState<boolean>(false) // 복사 성공 여부
 
+  // 복사 기능 로직
   const clickCopy = async () => {
     const isSuccess = await textCopy(EMAIL)
     if (isSuccess) setCopy(true)
@@ -29,8 +30,8 @@ const Mail = () => {
 
   const onLeave = () => {
     setTimeout(() => {
-      setCopy(false) // 복사완료 여부
-      setShow(false) // 툴팁 렌더링 여부
+      setShow(false) // 툴팁 렌더링 해제
+      setCopy(false) // 복사완료 해제
     }, 200)
   }
 
