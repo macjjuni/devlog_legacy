@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -18,6 +19,11 @@ interface NotionPageRendererProps {
 const NotionRender = ({ recordMap }: NotionPageRendererProps) => {
   const { theme } = useAppSelector((state) => state.theme)
 
+  useEffect(() => {
+    const tocDom = document.getElementsByClassName('notion-aside-table-of-contents-header')[0] as HTMLElement
+    if (tocDom !== null) tocDom.textContent = '📋 목차'
+  }, [])
+
   return (
     <NotionRenderer
       recordMap={recordMap}
@@ -28,7 +34,14 @@ const NotionRender = ({ recordMap }: NotionPageRendererProps) => {
       pageCover={<></>}
       showTableOfContents
       previewImages={!!recordMap?.preview_images}
-      // mapImageUrl={(url, block) => defaultMapImageUrl(url, block) ?? url}
+      // TOC에 댓글 추가
+      pageAside={
+        <div className="px-[8px]">
+          <a href="#kku-detail-comment" className="notion-table-of-contents-item notion-table-of-contents-item-indent-level-0 p-[8px]">
+            <span className="notion-table-of-contents-item-body">💬 댓글</span>
+          </a>
+        </div>
+      }
       components={{
         // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-return
         propertyDateValue: (dateProperty) => dateProperty.data[0][1][0][1].start_date,
