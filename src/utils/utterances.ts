@@ -2,6 +2,8 @@ import { ThemeTypes } from './colorMode'
 
 type ExcludeNullThemeTypes = Exclude<ThemeTypes, null>
 
+export const targetId = 'kku-dev-comment'
+
 // utterances 스크립트 삽입
 export const appendUtter = (dom: HTMLElement, theme: Exclude<ThemeTypes, null>) => {
   const scriptEl = document.createElement('script')
@@ -36,4 +38,16 @@ export const removeLazy = () => {
   const iframe = document.querySelector<HTMLIFrameElement>('.utterances-frame')
   if (!iframe) return
   iframe.setAttribute('loading', 'eager')
+}
+
+// 스크롤 이동
+export const scrollComment = (e: React.MouseEvent) => {
+  e.preventDefault()
+  const ancorEle = document.createElement('a')
+  ancorEle.href = `#${targetId}`
+  ancorEle.click()
+  setTimeout(() => {
+    ancorEle.click()
+    ancorEle.remove()
+  }, 1200)
 }

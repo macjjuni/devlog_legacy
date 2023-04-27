@@ -59,6 +59,7 @@
     "eslint-disable-next-line func-names, object-shorthand": "off",
     "import/no-extraneous-dependencies": "off",
     "jsx-a11y/anchor-is-valid": "off",
-    "eslint-disable-next-line @next/next/no-img-element": "off"
+    "eslint-disable-next-line @next/next/no-img-element": "off",
+    "@next/next/no-html-link-for-pages": "off"
   }
 }
