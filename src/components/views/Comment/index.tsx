@@ -1,11 +1,27 @@
 import { useEffect, useRef } from 'react'
 import { useAppSelector } from '@/redux/hook'
-import { appendUtter, isContainUtter, removeUtter } from '@/utils/utterances'
-// utterances 사용
+import { appendUtter, isContainUtter, toggleTheme, removeLazy } from '@/utils/utterances'
+
+/* ----------------- utterances ----------------- */
+
+const config = { childList: true } // Observer 설정
 
 const Comment = () => {
   const { theme } = useAppSelector((state) => state.theme)
   const commentRef = useRef<HTMLElement | null>(null)
+
+  // Observer Handler
+  const observerHandler = () => {
+    removeLazy()
+  }
+
+  useEffect(() => {
+    const observer = new MutationObserver(observerHandler) // Observer 생성
+    if (commentRef.current) observer.observe(commentRef.current, config) // Observer 시작
+    return () => {
+      observer.disconnect() // Observer 종료
+    }
+  }, [])
 
   useEffect(() => {
     const commentDom = commentRef.current
@@ -13,15 +29,11 @@ const Comment = () => {
 
     const isContain = isContainUtter(commentDom)
     if (isContain) {
-      // 렌더링 된 경우
-      removeUtter(commentDom)
-      appendUtter(commentDom, theme)
+      toggleTheme(theme) // 렌더링 된 경우 테마 변경 됐을 때 로직 실행!
     } else {
-      // 아직 렌더링 안 된 경우
-      appendUtter(commentDom, theme)
+      appendUtter(commentDom, theme) // 렌더링 안 됐으면 스크립트 삽입 로직 실행!
     }
   }, [theme])
-  //
 
   return (
     <section id="kku-detail-comment" className="flex justify-start items-center flex-row-reverse" ref={commentRef}>
