@@ -1,5 +1,8 @@
 import { ThemeTypes } from './colorMode'
 
+type ExcludeNullThemeTypes = Exclude<ThemeTypes, null>
+
+// utterances 스크립트 삽입
 export const appendUtter = (dom: HTMLElement, theme: Exclude<ThemeTypes, null>) => {
   const scriptEl = document.createElement('script')
   scriptEl.src = 'https://utteranc.es/client.js'
@@ -12,17 +15,25 @@ export const appendUtter = (dom: HTMLElement, theme: Exclude<ThemeTypes, null>) 
   dom.appendChild(scriptEl)
 }
 
-export const removeUtter = (parentDom: HTMLElement) => {
-  for (let i = 0; i < parentDom.children.length; i++) {
-    const isContain = parentDom.children[i].classList.contains('utterances')
-    if (isContain) parentDom.children[i].remove()
-  }
-}
-
+// utterances 삽입 유무
 export const isContainUtter = (parentDom: HTMLElement) => {
   let isContain = false
   for (let i = 0; i < parentDom.children.length; i++) {
     isContain = parentDom.children[i].classList.contains('utterances')
   }
   return isContain
+}
+
+// 테마 변경
+export const toggleTheme = (theme: ExcludeNullThemeTypes) => {
+  const iframe = document.querySelector<HTMLIFrameElement>('.utterances-frame')
+  if (!iframe) return
+  iframe?.contentWindow?.postMessage({ type: 'set-theme', theme: `github-${theme}` }, 'https://utteranc.es')
+}
+
+// Remove LazyLoading
+export const removeLazy = () => {
+  const iframe = document.querySelector<HTMLIFrameElement>('.utterances-frame')
+  if (!iframe) return
+  iframe.setAttribute('loading', 'eager')
 }
