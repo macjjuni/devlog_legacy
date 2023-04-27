@@ -3,7 +3,6 @@ import { useAppSelector } from '@/redux/hook'
 import { appendUtter, isContainUtter, toggleTheme, removeLazy } from '@/utils/utterances'
 
 /* ----------------- utterances ----------------- */
-
 const config = { childList: true } // Observer 설정
 
 const Comment = () => {
@@ -36,7 +35,7 @@ const Comment = () => {
   }, [theme])
 
   return (
-    <section id="kku-detail-comment" className="flex justify-start items-center flex-row-reverse" ref={commentRef}>
+    <section ref={commentRef} id="kku-detail-comment" className="flex justify-start items-center flex-row-reverse">
       <div className="block hidden lg:block max-w-[280px] min-w-[280px] w-[280px]" />
     </section>
   )
