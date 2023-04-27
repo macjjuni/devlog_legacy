@@ -28,7 +28,7 @@ export const isContainUtter = (parentDom: HTMLElement) => {
 export const toggleTheme = (theme: ExcludeNullThemeTypes) => {
   const iframe = document.querySelector<HTMLIFrameElement>('.utterances-frame')
   if (!iframe) return
-  iframe?.contentWindow?.postMessage({ type: 'set-theme', theme: `github-${theme}` }, 'https://utteranc.es')
+  iframe.contentWindow?.postMessage({ type: 'set-theme', theme: `github-${theme}` }, 'https://utteranc.es')
 }
 
 // Remove LazyLoading
