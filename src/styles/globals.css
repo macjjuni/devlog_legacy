@@ -226,13 +226,12 @@ body {
   align-items: center;
   padding: 2px 8px;
   position: relative;
-  border-radius: 4px;
   white-space: nowrap;
   user-select: none;
   cursor: pointer;
   transition: 0.3s ease;
 }
-.TagItem > a {
+.TagItem span {
   position: relative;
   top: 1px;
 }
