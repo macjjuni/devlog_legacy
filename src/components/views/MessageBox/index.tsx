@@ -5,14 +5,17 @@ import { sendMessage } from '@/api/message'
 const MessageBox = () => {
   const msgRef = useRef<HTMLTextAreaElement>(null)
   const btnRef = useRef<HTMLButtonElement>(null)
+  const isLoad = useRef<boolean>(false)
 
   const sendMsg = async () => {
-    if (!msgRef.current) return
+    if (!msgRef.current || isLoad.current) return
+    isLoad.current = true
 
     const msg = msgRef.current.value.trim()
     if (msg === '') {
       msgRef.current.focus()
       toast.warn('방명록을 작성해주세요 🙏')
+      isLoad.current = false
       return
     }
 
@@ -29,6 +32,7 @@ const MessageBox = () => {
       console.error(e)
     } finally {
       btnRef.current?.blur()
+      isLoad.current = false
     }
   }
 
