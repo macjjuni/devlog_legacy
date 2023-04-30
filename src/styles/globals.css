@@ -202,8 +202,8 @@ body {
 .NavLink::after {
   content: '';
   position: absolute;
-  left: 4px;
-  bottom: 9px;
+  left: 6px;
+  bottom: 12px;
   width: 0;
   transition: 0.3s ease;
 }
@@ -273,4 +273,8 @@ body {
   margin: 0 !important;
   width: 100% !important;
   max-width: 100% !important;
+}
+
+.Toastify__toast-container--top-right {
+  top: 4rem !important;
 }
