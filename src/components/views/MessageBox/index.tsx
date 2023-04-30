@@ -18,9 +18,11 @@ const MessageBox = () => {
 
     try {
       const res = await sendMessage(msg)
-      if (res.data) {
+      if (res.data && res.data.status) {
         msgRef.current.value = ''
         toast.success('소중한 방명록 감사합니다. 🙇‍♂️')
+      } else {
+        toast.error('네트워크 오류입니다. 나중에 다시 시도해주세요. 🙏')
       }
     } catch (e) {
       toast.error('네트워크 오류입니다. 나중에 다시 시도해주세요. 🙏')

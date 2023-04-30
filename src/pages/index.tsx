@@ -1,5 +1,6 @@
 import PageHead from '@/components/common/PageHead'
 import Mail from '@/components/views/Mail'
+import MessageBox from '@/components/views/MessageBox'
 import { text } from '@/styles/global'
 
 const CName = `${text.light} text-xlg`
@@ -10,7 +11,7 @@ const Home = () => {
       <PageHead subTitle="Home" />
       <section className="flex justify-start items-center min-h-main select-none md:flex-row flex-col">
         <div className="w-full m-0 md:h-[500px] h-[400px]" />
-        <div className="flex flex-col justify-start gap-8  w-full m-0 ridi">
+        <div className="flex flex-col justify-start gap-6  w-full m-0 ridi">
           <h1 className={`${text.black} text-head_lg fwb italic`}>About</h1>
 
           <h2 className={CName}>
@@ -35,6 +36,8 @@ const Home = () => {
             언제든 메일을 보내주세요!
           </h2>
           <Mail />
+          <h2 className="text-black dark:text-[#fff] ease duration-500 text-head_lg fwb italic">Message</h2>
+          <MessageBox />
         </div>
       </section>
     </>
