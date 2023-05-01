@@ -5,7 +5,7 @@ import { textCopy } from '@/utils/copy'
 import Tooltip from '@/components/views/Tooltip'
 import { text } from '@/styles/global'
 
-const EMAIL = process.env.NEXT_PUBLIC_EMAIL || 'not found email 404'
+const EMAIL = process.env.NEXT_PUBLIC_EMAIL || 'not found email'
 
 // Lottie Option
 const defaultOption = {
