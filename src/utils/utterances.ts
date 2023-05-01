@@ -10,7 +10,7 @@ export const appendUtter = (dom: HTMLElement, theme: Exclude<ThemeTypes, null>) 
   scriptEl.src = 'https://utteranc.es/client.js'
   scriptEl.async = true
   scriptEl.crossOrigin = 'anonymous'
-  scriptEl.setAttribute('repo', 'macjjuni/kku.dev-comment')
+  scriptEl.setAttribute('repo', 'macjjuni/devlog')
   scriptEl.setAttribute('issue-term', 'url')
   scriptEl.setAttribute('theme', `github-${theme}`)
   scriptEl.setAttribute('label', '💬 Discussion')
