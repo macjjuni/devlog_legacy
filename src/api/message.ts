@@ -5,7 +5,7 @@ interface IMessageRes {
   status: boolean
 }
 
-export const sendMessage = async (msg: string) => {
+export const writeMessage = async (msg: string) => {
   const url = '/api/createComment'
   const params: IMessage = { message: msg }
   const res: AxiosResponse<IMessageRes> = await axios.post(url, params)
