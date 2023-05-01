@@ -39,6 +39,7 @@
     "react-notion-x": "^6.16.0",
     "react-redux": "^8.0.5",
     "react-toastify": "^9.1.2",
+    "request-ip": "^3.3.0",
     "sass": "^1.58.3",
     "three": "^0.149.0"
   },
@@ -48,6 +49,7 @@
     "@types/gtag.js": "^0.0.12",
     "@types/lodash": "^4.14.191",
     "@types/nprogress": "^0.2.0",
+    "@types/request-ip": "^0.0.37",
     "@types/three": "^0.149.0",
     "@typescript-eslint/eslint-plugin": "^5.53.0",
     "@typescript-eslint/parser": "^5.53.0",
