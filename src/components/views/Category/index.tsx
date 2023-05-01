@@ -14,16 +14,16 @@ const Category = ({ postCount, category }: IBlogCategory) => {
   return (
     <aside>
       <ul className="TagWrap flex justify-start items-center border-b border-b-BLG300 dark:border-b-BLG700 ease">
-        <li className={`${text.light} ${pathname === '/blog' ? 'TagActive' : ''} TagItem text-lg rounded-sm after:bg-BLG800 dark:after:bg-BLG200 hover:bg-BLG200 dark:hover:bg-BLG700`}>
+        <li className={`${text.light} ${pathname === '/blog' ? 'TagActive' : ''} TagItem text-lg rounded-sm after:bg-BLG800 dark:after:bg-BLG300 hover:bg-BLG300 dark:hover:bg-BLG700`}>
           <Link href="/blog" className="fcc gap-2">
             <BsFillGridFill className="mb-1" />
-            <span>전체{pathname === '/blog' && `(${postCount})`}</span>
+            <span>All{pathname === '/blog' && `(${postCount})`}</span>
           </Link>
         </li>
         {category?.map((item) => (
           <li
             key={item.id}
-            className={`${text.light} ${query.name === item.name ? 'TagActive' : ''} TagItem text-BLG800 rounded-sm text-lg after:bg-BLG800 dark:after:bg-BLG200 hover:bg-BLG200 dark:hover:bg-BLG700`}
+            className={`${text.light} ${query.name === item.name ? 'TagActive' : ''} TagItem text-BLG800 rounded-sm text-lg after:bg-BLG800 dark:after:bg-BLG300 hover:bg-BLG200 dark:hover:bg-BLG700`}
           >
             <Link href={`/category/${item.name}`}>
               <span>
