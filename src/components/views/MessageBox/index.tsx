@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react'
 import { toast } from 'react-toastify'
-import { writeMessage } from '@/api/message'
 import { BsInfoCircle } from 'react-icons/bs'
+import { writeMessage } from '@/api/message'
 import LottieItem from '@/components/common/LottieItem'
 import SpinnerLottie from '@/assets/lottie/spinner.json'
 
@@ -70,7 +70,7 @@ const MessageBox = () => {
       <div className="flex justify-between items-center">
         <div className="fcc">
           <BsInfoCircle className="mr-2 mt-[1px] dark:text-BLG100 durtaion-300" />
-          <span className="text-[12px] dark:text-BLG300">메시지는 주인장만 볼 수 있습니다.</span>
+          <span className="text-[14px] dark:text-BLG300">메시지는 주인장만 볼 수 있습니다.</span>
         </div>
         <button ref={btnRef} disabled={isLoad} type="button" onClick={onSendMessage} className="fcc w-[80px] h-[34px] px-lg border border-BLG600 dark:text-BLG300 duration-300">
           {!isLoad ? '보내기' : <LottieItem defaultOption={defaultOption} animationData={SpinnerLottie} />}
