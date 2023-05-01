@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react'
 import { toast } from 'react-toastify'
 import { writeMessage } from '@/api/message'
+import { BsInfoCircle } from 'react-icons/bs'
 import LottieItem from '@/components/common/LottieItem'
 import SpinnerLottie from '@/assets/lottie/spinner.json'
 
@@ -64,10 +65,14 @@ const MessageBox = () => {
         disabled={isLoad}
         maxLength={255}
         placeholder="소중한 방명록을 남겨주세요 ✉️"
-        className="w-full border border-BLG600 p-md outline-0 resize-none"
+        className="w-full border border-BLG600 dark:bg-BLG800 dark:text-BLG300 p-md outline-0 duration-300 resize-none"
       />
-      <div className="flex justify-end">
-        <button ref={btnRef} disabled={isLoad} type="button" onClick={onSendMessage} className="fcc border border-BLG600 w-[80px] h-[34px] px-lg">
+      <div className="flex justify-between items-center">
+        <div className="fcc">
+          <BsInfoCircle className="mr-2 mt-[1px] dark:text-BLG100 durtaion-300" />
+          <span className="text-[12px] dark:text-BLG300">메시지는 주인장만 볼 수 있습니다.</span>
+        </div>
+        <button ref={btnRef} disabled={isLoad} type="button" onClick={onSendMessage} className="fcc w-[80px] h-[34px] px-lg border border-BLG600 dark:text-BLG300 duration-300">
           {!isLoad ? '보내기' : <LottieItem defaultOption={defaultOption} animationData={SpinnerLottie} />}
         </button>
       </div>
