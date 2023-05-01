@@ -71,7 +71,7 @@ const MessageBox = () => {
         <div className="fcc">
           <BsInfoCircle className="mr-2 dark:text-BLG100 durtaion-300" />
           <span className="relative top-[1px] text-[12px] dark:text-BLG300 leading-[1.2]">
-            메시지는 주인장만 볼 수 있있습니다.
+            메시지는 주인장만 볼 수 있습니다.
             {/* <br />
             악성 봇 차단을 위해 IP 주소를 수집하고 있습니다. */}
           </span>
