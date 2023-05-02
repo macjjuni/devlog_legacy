@@ -19,7 +19,7 @@ const Banner = ({ data }: { data: IBlogInfo }) => {
       </div>
       <div className="flex justify-between items-center flex-col gap-[8px] pt-[24px] pb-[8px]">
         <h1 className={`${text.light} flex justify-between items-center text-head_lg fwb w-full`}>
-          <div className="cursor-pointer ease hover:text-primary">
+          <div className="cursor-pointer ease hover:text-primary select-none">
             {data.icon} {data.title}
           </div>
           <SNSList />
