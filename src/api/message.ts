@@ -1,6 +1,9 @@
 import axios, { AxiosResponse } from 'axios'
-import { IMessage } from '@/types/types'
 
+// ------------------ Message Type ------------------
+interface IMessage {
+  message: string
+}
 interface IMessageRes {
   status: boolean
 }

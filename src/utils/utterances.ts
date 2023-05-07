@@ -1,4 +1,4 @@
-import { ThemeTypes } from './colorMode'
+import { ThemeTypes } from '@/types/theme'
 
 type ExcludeNullThemeTypes = Exclude<ThemeTypes, null>
 

@@ -47,7 +47,3 @@ export interface IBlogInfo {
     options: SelectPropertyResponse[]
   } | null
 }
-
-export interface IMessage {
-  message: string
-}
