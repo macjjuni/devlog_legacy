@@ -15,7 +15,7 @@ const PostList = ({ data }: IPostList) => {
           <Link href={`/blog/${post.id}`} className="flex flex-col justify-start w-full">
             <p className="text-md text-primary fwb">{post.category?.name}</p>
             <h2 className={`text-xlg md:text-head_sm ${text.normal} fwb whitespace-nowrap truncate`}>{post.title}</h2>
-            <p className="text-sm text-BLG500">{post.published.substring(0, 10)}</p>
+            <p className={`text-md ${text.normal}`}>{post.published.substring(0, 10)}</p>
             <ul className="flex justify-start items-center gap-[1rem] mt-[10px] h-[28px]">
               {post.tags.map((tag) => (
                 <li key={tag.id} className={`text-md ${text.light}`}>
