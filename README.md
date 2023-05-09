@@ -133,3 +133,25 @@ style(ui/input): secondary 스타일 작성
 ```
 
 <br>
+
+### ENV
+
+```
+// 웹사이트 데이터
+SITE_URL=
+DESCRIPTION=
+NEXT_PUBLIC_INSTA=
+NEXT_PUBLIC_TISTORY=
+NEXT_PUBLIC_GITHUB=
+NEXT_PUBLIC_TITLE=
+NEXT_PUBLIC_LOGO=
+NEXT_PUBLIC_EMAIL=
+// 구글 애널리틱스
+NEXT_PUBLIC_GA_ID=
+// 노션 공식 API 초기화 데이터터
+NOTION_TOKEN=
+NOTION_DATABASE_ID=
+// 노션 비공식 API 초기화 데이터 https://github.com/NotionX/react-notion-x#private-pages
+NOTION_USER=
+NOTION_TOKEN_V2=
+```
