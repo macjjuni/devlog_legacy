@@ -234,11 +234,11 @@ body {
 }
 
 .sns-active::after {
-  background-color: #04cf52;
+  background-color: var(--SUCCESS);
 }
 
 .sns-warning::after {
-  background-color: #ffab49;
+  background-color: var(--WARNING);
 }
 
 @keyframes blinkEffect {
