@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import { POSTS_PER_PAGE } from '@/notion/config'
 import { parseDatabaseItems } from '@/notion/utils/parseDatabaseItems'
 import { initBlogInfo, getSearchItems } from '@/notion/notion'
-import PageHead from '@/components/common/PageHead'
+import SEO from '@/components/common/SEO'
 import Banner from '@/components/views/Banner'
 import PostList from '@/components/views/PostList'
 import Category from '@/components/views/Category'
@@ -34,7 +34,7 @@ const CategoryPage = ({ data, blogData }: ICateory) => {
   return (
     <section>
       <Banner data={blogData} />
-      <PageHead subTitle="Blog" />
+      <SEO subTitle="Blog" />
       <Category postCount={postCount} category={blogData?.category?.options} />
       <PostList data={postData} />
       <Pagination current={currentPage} total={postCount} />

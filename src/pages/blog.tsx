@@ -5,7 +5,7 @@ import { POSTS_PER_PAGE } from '@/notion/config'
 import { getCachedDatabaseItems } from '@/notion/utils/getCachedDatabaseItems'
 import { parseDatabaseItems } from '@/notion/utils/parseDatabaseItems'
 import { initBlogInfo } from '@/notion/notion'
-import PageHead from '@/components/common/PageHead'
+import SEO from '@/components/common/SEO'
 import Banner from '@/components/views/Banner'
 import PostList from '@/components/views/PostList'
 import Category from '@/components/views/Category'
@@ -28,7 +28,7 @@ const Blog = ({ data, blogData }: IBlog) => {
   }, [currentPage, data])
   return (
     <section className="">
-      <PageHead subTitle="Blog" />
+      <SEO subTitle="Blog" />
       <Banner data={blogData} />
       <Category postCount={postCount} category={blogData?.category?.options} />
       <PostList data={postData} />

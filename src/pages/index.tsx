@@ -1,4 +1,4 @@
-import PageHead from '@/components/common/PageHead'
+import SEO from '@/components/common/SEO'
 import Mail from '@/components/views/Mail'
 import MessageBox from '@/components/views/MessageBox'
 import { text } from '@/styles/global'
@@ -8,7 +8,7 @@ const CName = `${text.light} text-xlg`
 const Home = () => {
   return (
     <>
-      <PageHead subTitle="Home" />
+      <SEO subTitle="Home" />
       <section className="flex justify-start items-center min-h-main select-none md:flex-row flex-col">
         <div className="w-full m-0 md:h-[500px] h-[400px]" />
         <div className="flex flex-col justify-start gap-6  w-full m-0 ridi">

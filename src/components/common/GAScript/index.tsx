@@ -5,6 +5,7 @@ import * as gtag from '@/utils/gtag'
 
 const isDev = process.env.NODE_ENV === 'development'
 
+// ---------- Google Analytics ----------
 const GAScript = () => {
   const { events } = useRouter()
 

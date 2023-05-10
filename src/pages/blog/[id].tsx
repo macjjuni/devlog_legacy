@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import type { ExtendedRecordMap } from 'notion-types'
 import { getPageTitle } from 'notion-utils'
 import { getHeadDescription } from '@/notion/utils/getHeadDescription'
-import PageHead from '@/components/common/PageHead'
+import SEO from '@/components/common/SEO'
 import NotionRender from '@/components/common/NotionRender'
 import Comment from '@/components/views/Comment'
 import NotionSkeleton from '@/components/views/NotionSkeleton'
@@ -23,7 +23,7 @@ const DetailsPage = ({ recordMap }: IDetailsPage) => {
 
   return (
     <>
-      <PageHead subTitle={pageTitle} description={description === '' ? pageTitle : description} />
+      <SEO subTitle={pageTitle} description={description === '' ? pageTitle : description} />
       <NotionRender recordMap={recordMap} />
       <Comment />
     </>

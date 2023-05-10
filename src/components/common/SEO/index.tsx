@@ -10,7 +10,7 @@ interface IPageHead {
   description?: string
 }
 
-const PageHead = ({ subTitle, description }: IPageHead) => {
+const SEO = ({ subTitle, description }: IPageHead) => {
   const { asPath } = useRouter()
   const fullTitle = `${subTitle ? `${subTitle} | ${DEFAULT_TITLE}` : DEFAULT_TITLE}`
   const fullUrl = DEFAULT_SITE_URL + asPath
@@ -40,4 +40,4 @@ const PageHead = ({ subTitle, description }: IPageHead) => {
   )
 }
 
-export default PageHead
+export default SEO
