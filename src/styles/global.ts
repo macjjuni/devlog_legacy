@@ -4,7 +4,7 @@ export const lightBg = '#ffffff'
 export const darkBg = '#202020'
 
 export const text = {
-  black: `text-black dark:text-[#fff] ${ease}`,
+  black: `text-[#000] dark:text-[#fff] ${ease}`,
   normal: `text-BLG800 dark:text-COLOR_0 ${ease}`,
   light: `text-BLG700 dark:text-BLG300 ${ease}`,
 }

@@ -80,7 +80,7 @@ body {
 /* ---------- Scrollbar Style ---------- */
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
   transition: 0.3s ease;
 }
 /* Background Style */
