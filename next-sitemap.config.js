@@ -4,10 +4,13 @@ module.exports = {
   generateRobotsTxt: true, // (optional)
   // ...other options
   siteUrl: 'https://kku.dev',
-  exclude: ['/server-sitemap.xml'], // <= exclude here
+  sitemapSize: 7000,
+  exclude: [], // <= exclude here
+  changefreq: "daily",
   robotsTxtOptions: {
     additionalSitemaps: [
       'https://kku.dev/server-sitemap.xml', // <==== Add here
     ],
   },
+  priority: 0.5,
 }
