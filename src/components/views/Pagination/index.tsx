@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from 'react-icons/md'
-import { text } from '@/styles/global'
 import { PAGINATION_RANGE, POSTS_PER_PAGE } from '@/notion/config'
+import { text } from '@/styles/global'
 
 interface PaginationButtonProps {
   children: React.ReactNode
@@ -14,7 +14,11 @@ const PaginationButton = ({ children, to, disabled = false }: PaginationButtonPr
   }
   return (
     <Link href={{ query: { page: to } }} onClick={ableCheck}>
-      <button type="button" className={`${text.normal} fcc sm:text-md md:text-lg w-[26px] h-[26px] md:w-[34px] md:h-[34px] p-[4px] ${disabled ? 'cursor-not-allowed	' : ''}`} disabled={disabled}>
+      <button
+        type="button"
+        className={`fcc sm:text-md md:text-lg w-[26px] h-[26px] md:w-[34px] md:h-[34px] p-[4px] ${disabled ? `cursor-not-allowed ${text.disable}` : text.normal}`}
+        disabled={disabled}
+      >
         {children}
       </button>
     </Link>
