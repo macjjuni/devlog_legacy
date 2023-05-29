@@ -9,8 +9,11 @@ interface PaginationButtonProps {
   to: number
 }
 const PaginationButton = ({ children, to, disabled = false }: PaginationButtonProps) => {
+  const ableCheck = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (disabled) e.preventDefault()
+  }
   return (
-    <Link href={{ query: { page: to } }}>
+    <Link href={{ query: { page: to } }} onClick={ableCheck}>
       <button type="button" className={`${text.normal} fcc sm:text-md md:text-lg w-[26px] h-[26px] md:w-[34px] md:h-[34px] p-[4px] ${disabled ? 'cursor-not-allowed	' : ''}`} disabled={disabled}>
         {children}
       </button>
