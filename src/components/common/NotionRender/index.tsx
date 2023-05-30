@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 import { ExtendedRecordMap } from 'notion-types'
 import { NotionRenderer } from 'react-notion-x'
 import { useAppSelector } from '@/redux/hook'
@@ -19,6 +20,12 @@ interface NotionPageRendererProps {
 
 const NotionRender = ({ recordMap }: NotionPageRendererProps) => {
   const { theme } = useAppSelector((state) => state.theme)
+  const { push } = useRouter()
+
+  const goBack = async (e: React.MouseEvent) => {
+    e.preventDefault()
+    await push('/blog', '', { scroll: false })
+  }
 
   useEffect(() => {
     const tocDom = document.getElementsByClassName('notion-aside-table-of-contents-header')[0] as HTMLElement
@@ -37,9 +44,12 @@ const NotionRender = ({ recordMap }: NotionPageRendererProps) => {
       previewImages={!!recordMap?.preview_images}
       // TOC에 댓글 추가
       pageAside={
-        <div className="px-[8px] w-full">
+        <div className="pl-[16px] w-full">
           <a href="/" onClick={scrollComment} className="notion-table-of-contents-item notion-table-of-contents-item-indent-level-0 p-[8px]">
             <span className="notion-table-of-contents-item-body">💬 댓글</span>
+          </a>
+          <a href="/" onClick={goBack} className="notion-table-of-contents-item notion-table-of-contents-item-indent-level-0 p-[8px]">
+            <span className="notion-table-of-contents-item-body">📚 글 목록</span>
           </a>
         </div>
       }

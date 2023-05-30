@@ -147,7 +147,7 @@
   max-height: calc(100vh - 148px - 16px);
   width: 100%;
   min-width: 222px;
-  padding: 0 8px;
+  padding: 0 0 0 16px;
   margin: 0;
   overflow: auto;
   border-radius: 4px;
