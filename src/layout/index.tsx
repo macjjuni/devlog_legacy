@@ -3,6 +3,7 @@ import Header from './Header'
 import Voxel from '@/components/views/Voxel'
 import Main from './Main'
 import Footer from './Footer'
+import TopButton from '@/components/views/TopButton'
 
 const Layout = ({ children }: { children: ReactNode }) => {
   const [voxelLoad, setVoxelLoad] = useState(false)
@@ -17,6 +18,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
       <Voxel load={voxelLoad} onLoad={onLoadVoxel} />
       <Main>{children}</Main>
       <Footer />
+      <TopButton />
     </div>
   )
 }
