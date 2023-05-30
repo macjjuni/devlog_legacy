@@ -12,7 +12,7 @@ const Logo = process.env.NEXT_PUBLIC_LOGO_TITLE || 'kku'
 const Header = () => {
   const { pathname } = useRouter()
   const dispatch = useAppDispatch()
-  const { scroll } = useAppSelector((state) => state.scroll)
+  const { scroll } = useAppSelector((state) => state.scroll) // true or false
   const obsRef = useRef(null)
 
   const obsHandler: IntersectionObserverCallback = (entries) => {
