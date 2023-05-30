@@ -13,8 +13,6 @@ const Header = () => {
   const { pathname } = useRouter()
   const dispatch = useAppDispatch()
   const { scroll } = useAppSelector((state) => state.scroll)
-  
-  // const [bgShadow, setBgShadow] = useState<boolean>(false)
   const obsRef = useRef(null)
 
   const obsHandler: IntersectionObserverCallback = (entries) => {
