@@ -1,6 +1,8 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { useAppSelector, useAppDispatch } from '@/redux/hook'
+import { onScroll, offScroll } from '@/redux/slice/scroll'
 import { pages } from '@/router'
 import { text } from '@/styles/global'
 import ToggleTheme from '@/components/views/ToggleTheme'
@@ -9,13 +11,16 @@ const Logo = process.env.NEXT_PUBLIC_LOGO_TITLE || 'kku'
 
 const Header = () => {
   const { pathname } = useRouter()
-  const [bgShadow, setBgShadow] = useState<boolean>(false)
+  const dispatch = useAppDispatch()
+  const { scroll } = useAppSelector((state) => state.scroll)
+  
+  // const [bgShadow, setBgShadow] = useState<boolean>(false)
   const obsRef = useRef(null)
 
   const obsHandler: IntersectionObserverCallback = (entries) => {
     const target = entries[0]
-    if (target.isIntersecting) setBgShadow(false)
-    else setBgShadow(true)
+    if (target.isIntersecting) dispatch(offScroll())
+    else dispatch(onScroll())
   }
 
   useEffect(() => {
@@ -30,7 +35,7 @@ const Header = () => {
       <div ref={obsRef} className="absolute top-0 left-0 w-0 h-0 bg-black" />
       {/* ----------------- 옵저버 ----------------- */}
 
-      <header className={`${bgShadow ? 'shadow-header dark:shadow-headerDark' : ''} fixed top-[0] left-[0] w-full backdrop-blur-sm z-[9000] ease`}>
+      <header className={`${scroll ? 'shadow-header dark:shadow-headerDark' : ''} fixed top-[0] left-[0] w-full backdrop-blur-sm z-[9000] ease`}>
         <div className="fc justify-between max-w-screen-lg w-full h-header mx-[auto] px-lg md:px-xlg">
           <Link href="/" className={`${text.black} Logo basic after:bg-primary select-none`}>
             {Logo}
