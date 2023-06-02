@@ -44,11 +44,11 @@ const NotionRender = ({ recordMap }: NotionPageRendererProps) => {
       previewImages={!!recordMap?.preview_images}
       // TOC에 댓글 추가
       pageAside={
-        <div className="pl-[16px] w-full">
-          <a href="/" onClick={scrollComment} className="notion-table-of-contents-item notion-table-of-contents-item-indent-level-0 p-[8px]">
+        <div className="pl-0 lg:pl-[16px] w-full">
+          <a href="/" onClick={scrollComment} className="notion-table-of-contents-item notion-table-of-contents-item-indent-level-0 p-[8px] mt-1">
             <span className="notion-table-of-contents-item-body">💬 댓글</span>
           </a>
-          <a href="/" onClick={goBack} className="notion-table-of-contents-item notion-table-of-contents-item-indent-level-0 p-[8px]">
+          <a href="/" onClick={goBack} className="notion-table-of-contents-item notion-table-of-contents-item-indent-level-0 p-[8px] mt-1">
             <span className="notion-table-of-contents-item-body">📚 글 목록</span>
           </a>
         </div>
