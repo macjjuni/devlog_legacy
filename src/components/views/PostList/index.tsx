@@ -20,9 +20,13 @@ const PostList = ({ data }: IPostList) => {
   }
 
   return (
-    <ul className="flex justify-start flex-col">
+    <ul className="flex justify-start flex-col mt-[6px] md:mt-[18px]">
       {data.map((post) => (
-        <li key={post.id} className="block border-b border-solid border-BG_0 py-xlg md:px-sm">
+        <li
+          key={post.id}
+          className="relative block py-xlg md:px-xlg rounded-md md:hover:bg-BLG100 after:absolute after:bottom-[0] after:left-[50%] 
+          after:translate-x-[-50%] after:bg-BG_0 after:w-[100%] md:after:w-[calc(100%-26px)] after:h-[1px]"
+        >
           <Link href={`/blog/${post.id}`} className="flex flex-col justify-start w-full">
             {/* 카테고리 */}
             <p className="text-md text-primary font-bold">{post.category?.name}</p>
