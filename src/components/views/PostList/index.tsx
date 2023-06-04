@@ -24,7 +24,7 @@ const PostList = ({ data }: IPostList) => {
       {data.map((post) => (
         <li
           key={post.id}
-          className="relative block py-xlg md:px-xlg rounded-md md:hover:bg-BLG100 after:absolute after:bottom-[0] after:left-[50%] 
+          className="relative block py-xlg md:px-xlg rounded-md dark:md:hover:bg-BLG800 md:hover:bg-BLG100 after:absolute after:bottom-[0] after:left-[50%] 
           after:translate-x-[-50%] after:bg-BG_0 after:w-[100%] md:after:w-[calc(100%-26px)] after:h-[1px] ease"
         >
           <Link href={`/blog/${post.id}`} className="flex flex-col justify-start w-full">
