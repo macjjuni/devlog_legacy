@@ -25,11 +25,11 @@ const theme = {
     },
     colors: {
       yellow: '#feca57',
+      red: '#ED2B2A',
       navy: '#341f97',
       black: '#222f3e',
       primary: '#ee5253',
       secondary: '#32D962',
-      error: '#FA5C5C',
       SUCCESS: '#04cf52',
       WARNING: '#FFAB49',
       BLG0: 'white',
@@ -84,6 +84,8 @@ const theme = {
     boxShadow: {
       header: 'rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px',
       headerDark: 'rgba(195, 191, 188, 0.3) 0px 1px 2px 0px, rgba(195, 191, 188, 0.15) 0px 2px 6px 2px',
+      newIcon: 'rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px',
+      newIconDark: 'rgba(255, 255, 255, 0.05) 0px 6px 24px 0px, rgba(255, 255, 255, 0.08) 0px 0px 0px 1px',
     },
   },
   plugins: [],

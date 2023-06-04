@@ -44,7 +44,7 @@ const Header = () => {
                 <Link
                   href={page.path}
                   className={`NavLink basic ${pathname === page.path ? 'active' : ''} ${page.path !== '/' ? (pathname.includes('blog') ? 'active' : '') : ''} 
-                ${text.black} md:text-head_sm text-xl fwb italic p-sm after:bg-black after:h-[2px] md:after:h-[3px] dark:after:bg-BLG0`}
+                ${text.black} md:text-head_sm text-xl font-bold italic p-sm after:bg-black after:h-[2px] md:after:h-[3px] dark:after:bg-BLG0`}
                 >
                   {page.title}
                 </Link>

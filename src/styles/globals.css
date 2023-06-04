@@ -41,11 +41,11 @@
 /* -------------------- Variables -------------------- */
 :root {
   --yellow: #feca57;
+  --red: #ed2b2a;
   --navy: #341f97;
   --black: #222f3e;
   --primary: #ee5253;
   --secondary: #32d962;
-  --error: #fa5c5c;
   --SUCCESS: #04cf52;
   --WARNING: #ffab49;
   --COLOR-BLG0: white;
@@ -113,9 +113,6 @@ body {
 .fc {
   display: flex;
   align-items: center;
-}
-.fwb {
-  font-weight: bold;
 }
 
 .transparent {
@@ -230,7 +227,7 @@ body {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  animation: blinkEffect 0.95s ease-in-out infinite alternate;
+  animation: blinkEffect 1s ease-in-out infinite alternate;
 }
 
 .sns-active::after {
@@ -329,4 +326,8 @@ body {
 
 .Toastify__toast-container--top-right {
   top: 4rem !important;
+}
+
+.new-icon {
+  animation: blinkEffect 0.8s ease-in-out infinite alternate;
 }

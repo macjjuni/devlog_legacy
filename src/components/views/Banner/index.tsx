@@ -18,7 +18,7 @@ const Banner = ({ data }: { data: IBlogInfo }) => {
         <Image src="/images/banner-cover.webp" alt="kku.dev Top Banner" onLoad={onLoadImage} className="absolute top-[50%] translate-y-[-40%] l-[0] w-full h-[auto] " width="1200" height="700" />
       </div>
       <div className="flex justify-between items-center flex-col gap-[8px] pt-[24px] pb-[8px]">
-        <h1 className={`${text.light} flex justify-between items-center text-head_lg fwb w-full`}>
+        <h1 className={`${text.light} flex justify-between items-center text-head_lg font-bold w-full`}>
           <div className="cursor-pointer ease hover:text-primary select-none">
             {data.icon} {data.title}
           </div>
