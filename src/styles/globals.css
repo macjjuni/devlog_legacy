@@ -279,10 +279,6 @@ body {
   cursor: pointer;
   transition: 0.2s ease;
 }
-.TagItem span {
-  position: relative;
-  top: 1px;
-}
 
 @keyframes slowUp {
   from {

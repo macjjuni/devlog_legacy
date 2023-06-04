@@ -17,19 +17,19 @@ const Category = ({ postCount, category }: IBlogCategory) => {
         <li className={`${text.light} ${pathname === '/blog' ? 'TagActive' : ''} TagItem text-lg rounded-sm after:bg-BLG800 dark:after:bg-BLG300 hover:bg-BLG300 dark:hover:bg-BLG700`}>
           <Link href="/blog" className="fcc gap-2">
             <BsFillGridFill className="mb-1" />
-            <span>All{pathname === '/blog' && `(${postCount})`}</span>
+            All{pathname === '/blog' && `(${postCount})`}
           </Link>
         </li>
         {category?.map((item) => (
           <li
             key={item.id}
-            className={`${text.light} ${query.name === item.name ? 'TagActive' : ''} TagItem text-BLG800 rounded-sm text-lg after:bg-BLG800 dark:after:bg-BLG300 hover:bg-BLG200 dark:hover:bg-BLG700`}
+            className={`${text.light} ${
+              query.name === item.name ? 'TagActive' : ''
+            } TagItem basic text-BLG800 rounded-sm text-lg after:bg-BLG800 dark:after:bg-BLG300 hover:bg-BLG200 dark:hover:bg-BLG700`}
           >
             <Link href={`/category/${item.name}`}>
-              <span>
-                {item.name}
-                {query.name === item.name && `(${postCount})`}
-              </span>
+              {item.name}
+              {query.name === item.name && `(${postCount})`}
             </Link>
           </li>
         ))}
