@@ -1,8 +1,7 @@
+import { onScroll } from './scroll'
 import { ThemeTypes } from '@/types/theme'
 
 type ExcludeNullThemeTypes = Exclude<ThemeTypes, null>
-
-export const targetId = 'kku-dev-comment'
 
 // utterances 스크립트 삽입
 export const appendUtter = (dom: HTMLElement, theme: Exclude<ThemeTypes, null>) => {
@@ -43,11 +42,6 @@ export const removeLazy = () => {
 // 스크롤 이동
 export const scrollComment = (e: React.MouseEvent) => {
   e.preventDefault()
-  const ancorEle = document.createElement('a')
-  ancorEle.href = `#${targetId}`
-  ancorEle.click()
-  setTimeout(() => {
-    ancorEle.click()
-    ancorEle.remove()
-  }, 1200)
+  const docHeight = document.body.scrollHeight
+  onScroll(docHeight)
 }

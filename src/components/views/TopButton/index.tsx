@@ -4,13 +4,14 @@ import { FaArrowAltCircleUp, FaArrowAltCircleLeft } from 'react-icons/fa'
 import { useRouter } from 'next/router'
 import { useAppSelector } from '@/redux/hook'
 import { topButtonEffect, secondEffect } from './framer'
+import { onScroll } from '@/utils/scroll'
 
 const TopButton = () => {
   const { back } = useRouter()
   const { scroll } = useAppSelector((state) => state.scroll)
 
   const onScrollTop = () => {
-    window.scroll({ top: 0, behavior: 'smooth' })
+    onScroll(0)
   }
   const onPageBack = () => {
     back()

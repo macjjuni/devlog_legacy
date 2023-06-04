@@ -35,7 +35,7 @@ const Comment = () => {
   }, [theme])
 
   return (
-    <section ref={commentRef} id="kku-dev-comment" className="flex justify-start items-center flex-row-reverse mt-[15px] md:mt-[30px]">
+    <section ref={commentRef} className="flex justify-start items-center flex-row-reverse h-[270px] mt-[15px] md:mt-[30px]">
       <div className="hidden lg:block max-w-[280px] min-w-[280px] w-[280px]" />
     </section>
   )
