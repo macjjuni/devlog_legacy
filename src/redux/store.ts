@@ -1,10 +1,12 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import { themeSlice } from './slice/theme'
 import { scrollSlice } from './slice/scroll'
+import { searchSlice } from './slice/search'
 
 const rootReducer = combineReducers({
   theme: themeSlice.reducer,
   scroll: scrollSlice.reducer,
+  search: searchSlice.reducer,
 })
 
 export const store = configureStore({
