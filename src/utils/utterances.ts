@@ -32,13 +32,6 @@ export const toggleTheme = (theme: ExcludeNullThemeTypes) => {
   iframe.contentWindow?.postMessage({ type: 'set-theme', theme: `github-${theme}` }, 'https://utteranc.es')
 }
 
-// Remove LazyLoading
-export const removeLazy = () => {
-  const iframe = document.querySelector<HTMLIFrameElement>('.utterances-frame')
-  if (!iframe) return
-  iframe.setAttribute('loading', 'eager')
-}
-
 // 스크롤 이동
 export const scrollComment = (e: React.MouseEvent) => {
   e.preventDefault()
