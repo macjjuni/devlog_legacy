@@ -5,7 +5,7 @@ import Search from '@/assets/lottie/search.json'
 const defaultOption = {
   loop: true,
   play: true,
-  style: { width: '400px', height: '400px' },
+  style: { width: '400px', height: '500px' },
 }
 
 const SearchLoader = () => {
