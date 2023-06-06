@@ -411,6 +411,7 @@
 
 .notion-h:hover .notion-hash-link {
   width: 16px;
+  margin: 0 10px 6px 0;
   opacity: 1;
 }
 
@@ -418,11 +419,8 @@
   width: 0;
   opacity: 0;
   text-decoration: none;
-  margin: 0 8px 10px 0;
-  /* float: left;
-  margin-left: -20px;
-  padding-right: 4px; */
-  transition: 0.3s ease;
+  margin: 0;
+  transition: 0.3s;
   fill: var(--fg-color-icon);
 }
 
@@ -1990,7 +1988,6 @@ svg.notion-page-icon {
   padding: 4px 0 8px;
   border-top: 1px solid var(--fg-color-0);
   border-bottom: 1px solid var(--fg-color-0);
-  margin-bottom: 1em;
 }
 
 .notion-collection-row-body {
