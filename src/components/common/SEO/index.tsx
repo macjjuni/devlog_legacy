@@ -16,6 +16,8 @@ const SEO = ({ subTitle, description }: IPageHead) => {
   const fullUrl = DEFAULT_SITE_URL + asPath
   const fullDescription = description !== undefined ? description : DEFAULT_DESCRIPTION
 
+  const defaultImage = `${DEFAULT_SITE_URL}/images/cover.png` // 썸네일 이미지
+
   return (
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,14 +30,14 @@ const SEO = ({ subTitle, description }: IPageHead) => {
       <meta property="og:type" content="website" />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={fullDescription} />
-      <meta property="og:image" content={`${DEFAULT_SITE_URL}/images/cover.png`} />
+      <meta property="og:image" content={defaultImage} />
       {/* Twitter Meta Tags */}
       <meta name="twitter:card" content="summary" />
       <meta property="twitter:domain" content={DEFAULT_SITE_URL} />
       <meta property="twitter:url" content={fullUrl} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={fullDescription} />
-      <meta name="twitter:image" content={`${DEFAULT_SITE_URL}/images/cover.png`} />
+      <meta name="twitter:image" content={defaultImage} />
     </Head>
   )
 }

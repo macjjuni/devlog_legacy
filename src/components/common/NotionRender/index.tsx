@@ -24,7 +24,7 @@ const NotionRender = ({ recordMap }: NotionPageRendererProps) => {
 
   const goBack = async (e: React.MouseEvent) => {
     e.preventDefault()
-    await push('/blog', '', { scroll: false })
+    await push('/blog', '', { scroll: true })
   }
 
   useEffect(() => {
