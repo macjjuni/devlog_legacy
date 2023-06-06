@@ -30,7 +30,7 @@ const SEO = ({ subTitle, description }: IPageHead) => {
       <meta property="og:description" content={fullDescription} />
       <meta property="og:image" content={`${DEFAULT_SITE_URL}/images/cover.png`} />
       {/* Twitter Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:card" content={`${DEFAULT_SITE_URL}/images/cover.png`} />
       <meta property="twitter:domain" content={DEFAULT_SITE_URL} />
       <meta property="twitter:url" content={fullUrl} />
       <meta name="twitter:title" content={fullTitle} />
