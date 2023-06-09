@@ -90,6 +90,7 @@ export const getPageContent = async (pageId: string) => {
   return recordMap
 }
 
+// 블로그 정보 조회
 export const initBlogInfo = async (databaseId: string) => {
   const database = (await notion.databases.retrieve({
     database_id: databaseId,
