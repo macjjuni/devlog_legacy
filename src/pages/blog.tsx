@@ -27,7 +27,7 @@ const Blog = ({ data, blogData }: IBlog) => {
     setPostData(data.slice(POSTS_PER_PAGE * (currentPage - 1), POSTS_PER_PAGE * currentPage))
   }, [currentPage, data])
   return (
-    <section className="">
+    <section>
       <SEO subTitle="Blog" />
       <Banner data={blogData} />
       <Category postCount={postCount} category={blogData?.category?.options} />
@@ -44,6 +44,7 @@ export const getStaticProps: GetStaticProps<IBlog> = async () => {
     const databaseItems = await getCachedDatabaseItems(databaseId)
     const parsedData = parseDatabaseItems(databaseItems)
     const blogData = await initBlogInfo(databaseId)
+
     return {
       props: {
         data: parsedData,

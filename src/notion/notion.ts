@@ -95,9 +95,10 @@ export const initBlogInfo = async (databaseId: string) => {
   const database = (await notion.databases.retrieve({
     database_id: databaseId,
   })) as DatabaseObjectResponse
+
   const title = database.title[0]?.type === 'text' ? database.title[0].plain_text : ''
   const description = database.description[0]?.type === 'text' ? database.description[0].plain_text : ''
-  const coverURL = database.cover?.type === 'file' ? database.cover?.file.url : ''
+  const coverURL = database.description[1] !== undefined ? database.description[1]?.href : '/images/banner-cover.webp' // 블로그 목록 썸네일
   const icon = database.icon?.type === 'emoji' ? database.icon.emoji : ''
   const tags = database.properties['태그'].type === 'multi_select' ? database.properties['태그'].multi_select : null
   const category = database.properties['카테고리'].type === 'select' ? database.properties['카테고리'].select : null
