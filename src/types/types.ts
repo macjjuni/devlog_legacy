@@ -38,7 +38,7 @@ export interface ITag {
 export interface IBlogInfo {
   title: string
   description: string
-  coverURL: string
+  coverURL: string | null
   icon: string
   tags: {
     options: SelectPropertyResponse[]

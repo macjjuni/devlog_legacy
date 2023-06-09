@@ -5,6 +5,7 @@ import type { IBlogInfo } from '@/types/types'
 import { text } from '@/styles/global'
 import SNSList from '../SNSList'
 import SearchBar from '@/components/views/SearchBar'
+import { DEFAULT_THUMB_URL } from '@/notion/config'
 
 const Banner = ({ data }: { data: IBlogInfo }) => {
   const [isLoad, setLoad] = useState(false)
@@ -16,7 +17,14 @@ const Banner = ({ data }: { data: IBlogInfo }) => {
     <div className="Banner-wrap">
       <div className="Banner-top-wrap relative w-full md:h-[300px] h-[200px] rounded-[3px] overflow-hidden z-[-1] select-none">
         {!isLoad && <Skeleton />}
-        <Image src={data.coverURL} alt="kku.dev Top Banner" onLoad={onLoadImage} className="absolute top-[50%] translate-y-[-40%] l-[0] w-full h-[auto] " width="1200" height="700" />
+        <Image
+          src={data.coverURL || DEFAULT_THUMB_URL}
+          alt="kku.dev Top Banner"
+          onLoad={onLoadImage}
+          className="absolute top-[50%] translate-y-[-40%] l-[0] w-full h-[auto] "
+          width="1200"
+          height="700"
+        />
       </div>
       <div className="flex justify-between items-center flex-col gap-[8px] pt-[24px] pb-[8px]">
         <h1 className={`${text.light} flex justify-between items-center text-head_lg font-bold w-full`}>
