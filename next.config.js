@@ -2,15 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [
-      'img1.daumcdn.net',
-      'www.notion.so',
-      's3.us-west-2.amazonaws.com',
-      'images.unsplash.com',
-      'kku.dev',
-      's3-us-west-2.amazonaws.com',
-      'github-production-user-asset-6210df.s3.amazonaws.com',
-    ],
+    domains: ['img1.daumcdn.net', 'www.notion.so', 's3.us-west-2.amazonaws.com', 'images.unsplash.com', 'kku.dev', 's3-us-west-2.amazonaws.com', 'github.com'],
   },
 }
 
