@@ -14,9 +14,9 @@ const Category = ({ postCount, category }: IBlogCategory) => {
   return (
     <aside>
       <ul className="TagWrap flex justify-start items-center border-b border-b-BLG300 dark:border-b-BLG700 ease">
-        <li className={`${text.light} ${pathname === '/blog' ? 'TagActive' : ''} TagItem text-lg rounded-sm after:bg-BLG800 dark:after:bg-BLG300 hover:bg-BLG300 dark:hover:bg-BLG700`}>
+        <li className={`${text.light} ${pathname === '/blog' ? 'TagActive' : ''} TagItem basic text-lg rounded-sm after:bg-BLG800 dark:after:bg-BLG300 hover:bg-BLG300 dark:hover:bg-BLG700`}>
           <Link href="/blog" className="fcc gap-2">
-            <BsFillGridFill className="mb-1" />
+            <BsFillGridFill />
             All{pathname === '/blog' && `(${postCount})`}
           </Link>
         </li>
