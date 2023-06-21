@@ -272,12 +272,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2px 8px;
   position: relative;
   white-space: nowrap;
   user-select: none;
   cursor: pointer;
   transition: 0.2s ease;
+}
+.TagItem > a {
+  padding: 2px 8px;
 }
 
 @keyframes slowUp {

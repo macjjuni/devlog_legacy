@@ -17,7 +17,7 @@ const Category = ({ postCount, category }: IBlogCategory) => {
         <li className={`${text.light} ${pathname === '/blog' ? 'TagActive' : ''} TagItem basic text-lg rounded-sm after:bg-BLG800 dark:after:bg-BLG300 hover:bg-BLG300 dark:hover:bg-BLG700`}>
           <Link href="/blog" className="fcc gap-2">
             <BsFillGridFill />
-            All{pathname === '/blog' && `(${postCount})`}
+            <span>All{pathname === '/blog' && `(${postCount})`}</span>
           </Link>
         </li>
         {category?.map((item) => (
