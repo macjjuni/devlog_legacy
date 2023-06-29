@@ -7,3 +7,4 @@ Host: https://kku.dev
 
 # Sitemaps
 Sitemap: https://kku.dev/sitemap.xml
+Sitemap: https://kku.dev/server-sitemap.xml
