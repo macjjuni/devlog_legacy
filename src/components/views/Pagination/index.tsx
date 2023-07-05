@@ -8,6 +8,15 @@ interface PaginationButtonProps {
   disabled?: boolean
   to: number
 }
+
+interface PaginationProps {
+  current: number
+  total: number
+}
+
+const iconSize = 28
+const underline = 'underline underline-offset-4	decoration-2	'
+
 const PaginationButton = ({ children, to, disabled = false }: PaginationButtonProps) => {
   const ableCheck = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (disabled) e.preventDefault()
@@ -25,12 +34,6 @@ const PaginationButton = ({ children, to, disabled = false }: PaginationButtonPr
   )
 }
 
-const iconSize = 28
-
-interface PaginationProps {
-  current: number
-  total: number
-}
 const Pagination = ({ current, total }: PaginationProps) => {
   const lastPageNumber = Math.ceil(total / POSTS_PER_PAGE)
 
@@ -50,7 +53,7 @@ const Pagination = ({ current, total }: PaginationProps) => {
           ) : null
         )}
 
-      <button type="button" className={`active ${text.normal} sm:text-md md:text-lg fcc w-[26px] h-[26px] md:w-[34px] md:h-[34px] p-[4px] rounded-full`}>
+      <button type="button" className={`${text.normal} ${underline} sm:text-md md:text-lg fcc w-[26px] h-[26px] md:w-[34px] md:h-[34px] p-[4px] rounded-full`}>
         {current}
       </button>
 
