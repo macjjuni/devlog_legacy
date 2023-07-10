@@ -184,7 +184,6 @@
 
 .notion-app {
   position: relative;
-  min-height: 100vh;
   font-size: 18px;
   background: none;
 }
@@ -226,7 +225,7 @@
   flex-direction: column;
   flex-grow: 1;
   align-items: center;
-  min-height: calc(100vh - var(--notion-header-height));
+  min-height: calc(100vh - (104px + 323px));
 }
 
 .notion-red,
