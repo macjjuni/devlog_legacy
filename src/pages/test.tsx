@@ -29,8 +29,8 @@ const Blog = ({ data, blogData }: IBlog) => {
   return (
     <section>
       <SEO subTitle="Blog" />
-      <TopBanner />
-      <Category postCount={postCount} category={blogData?.category?.options} />
+      <TopBanner data={blogData} />
+      {/* <Category postCount={postCount} category={blogData?.category?.options} / */}
       <PostList data={postData} />
       <Pagination current={currentPage} total={data.length} />
     </section>

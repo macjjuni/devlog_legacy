@@ -259,14 +259,13 @@ body {
 .NavLink.active::after {
   width: calc(100% - 8px);
 }
-.TagWrap::-webkit-scrollbar {
+.ChipWrap::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera*/
 }
-.TagWrap {
+.ChipWrap {
   overflow-x: auto;
   overflow-y: hidden;
   scroll-snap-type: none;
-  height: 50px;
 }
 .TagItem {
   display: flex;
@@ -328,4 +327,35 @@ body {
 
 .new-icon {
   animation: blinkEffect 0.8s ease-in-out infinite alternate;
+}
+
+.top-banner-img {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.sns-list:hover > a {
+  transform: translate(0, 0);
+  transition: 0.3s ease;
+}
+.sns-list:not(:hover) > a {
+  transition: 0.3s ease;
+}
+
+.sns-item-1 {
+  transform: translate(34px, 4px);
+  z-index: 100;
+}
+.sns-item-2 {
+  transform: translate(0, -16px);
+  z-index: 98;
+}
+.sns-item-3 {
+  transform: translate(-30px, 0px);
+  z-index: 99;
+}
+
+@media (max-width: 768px) {
+  .sns-list > a {
+    transform: translate(0, 0) !important;
+  }
 }
