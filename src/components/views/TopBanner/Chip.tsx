@@ -7,7 +7,7 @@ export const ChipWrap = ({ children }: { children: ReactNode }) => {
 
 export const ChipItem = ({ name, icon }: { name: string; icon?: React.ReactNode }) => {
   return (
-    <li className="pretendard text-sm md:text-md whitespace-nowrap	 h-[36px] bg-[#eee] rounded-[8px] shadow-tag">
+    <li className="pretendard text-sm md:text-md whitespace-nowrap h-[36px] bg-[#eee] rounded-[8px] shadow-tag">
       <Link href={`/category/${name}`} className="flex justify-center items-center gap-[4px] h-[100%] px-[10px]">
         {icon} {name}
       </Link>
