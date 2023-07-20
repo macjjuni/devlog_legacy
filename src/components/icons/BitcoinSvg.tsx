@@ -1,5 +1,5 @@
-const SvgBitcoin = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={36} height={36} viewBox="0.004 0 64 64">
+const SvgBitcoin = ({ width, height }: { width: number; height: number }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0.004 0 64 64">
     <path fill="#f7931a" d="M63.04 39.741c-4.274 17.143-21.638 27.575-38.783 23.301C7.12 58.768-3.313 41.404.962 24.262 5.234 7.117 22.597-3.317 39.737.957c17.144 4.274 27.576 21.64 23.302 38.784z" />
     <path
       fill="#fff"

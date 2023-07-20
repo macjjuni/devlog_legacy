@@ -336,21 +336,26 @@ body {
 .sns-list:hover > a {
   transform: translate(0, 0);
   transition: 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 .sns-list:not(:hover) > a {
   transition: 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .sns-item-1 {
   transform: translate(34px, 4px);
+  border-radius: 6px;
   z-index: 100;
 }
 .sns-item-2 {
   transform: translate(0, -16px);
+  border-radius: 50%;
   z-index: 98;
 }
 .sns-item-3 {
   transform: translate(-30px, 0px);
+  border-radius: 6px;
   z-index: 99;
 }
 

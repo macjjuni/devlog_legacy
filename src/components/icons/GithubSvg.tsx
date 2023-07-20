@@ -1,5 +1,5 @@
-const SvgGithub = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={32} height={32} viewBox="0 0 73 73">
+const SvgGithub = ({ width, height }: { width: number; height: number }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 73 73">
     <g fill="none" fillRule="nonzero" transform="translate(2 2)">
       <rect width={71} height={71} x={-1} y={-1} fill="#000" stroke="#000" strokeWidth={2} rx={14} />
       <path

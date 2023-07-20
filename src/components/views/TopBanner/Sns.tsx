@@ -12,7 +12,7 @@ const Sns = () => {
   return (
     <div className="sns-list relative flex justify-center items-end gap-[12px] w-[136px] h-[auto] md:h-[60px] pb-[4px]">
       <a className={`sns-item-1 {${size}}`} target="_blank" rel="noreferrer" href={githubURL} title="Github Blog">
-        <SvgGithub />
+        <SvgGithub width={32} height={32} />
       </a>
       <a className={`sns-item-2 {${size}}`} target="_blank" rel="noreferrer" href={tistoryURL} title="Tistory Blog">
         <SvgTistory />
