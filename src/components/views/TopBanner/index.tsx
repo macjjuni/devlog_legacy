@@ -13,8 +13,7 @@ const TopBanner = ({ data }: { data: IBlogInfo }) => {
   }, [])
 
   return (
-    <div className="h-[300px] flex gap-[16px] md:gap-[24px] lg:gap-[44px] py-[48px]">
-      <Image src={data.coverURL || '/images/banner-cover.webp'} alt="Top Banner" width="200" height="200" className="top-banner-img w-[120px] h-[120px] md:w-[200px] md:h-[200px] rounded-[24px]" />
+    <div className="flex gap-[16px] md:gap-[24px] lg:gap-[44px] py-[24px]">
       <div className="flex flex-col w-[calc(100%-(120px+16px))] md:w-[calc(100%-(200px+44px))] h-[200px]">
         <div>
           <ChipWrap>
