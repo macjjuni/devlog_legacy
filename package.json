@@ -46,7 +46,6 @@
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.1.6",
     "@react-three/fiber": "^8.11.2",
-    "@svgr/cli": "^8.0.1",
     "@types/gtag.js": "^0.0.12",
     "@types/lodash": "^4.14.191",
     "@types/nprogress": "^0.2.0",
