@@ -6,7 +6,6 @@ import { getCachedDatabaseItems } from '@/notion/utils/getCachedDatabaseItems'
 import { parseDatabaseItems } from '@/notion/utils/parseDatabaseItems'
 import { initBlogInfo } from '@/notion/notion'
 import SEO from '@/components/common/SEO'
-import TopBanner from '@/components/views/TopBanner'
 import PostList from '@/components/views/PostList'
 import Category from '@/components/views/Category'
 import Pagination from '@/components/views/Pagination'
@@ -29,8 +28,7 @@ const Blog = ({ data, blogData }: IBlog) => {
   return (
     <section>
       <SEO subTitle="Blog" />
-      <TopBanner data={blogData} />
-      {/* <Category postCount={postCount} category={blogData?.category?.options} / */}
+      <Category postCount={postCount} category={blogData?.category?.options} />
       <PostList data={postData} />
       <Pagination current={currentPage} total={data.length} />
     </section>

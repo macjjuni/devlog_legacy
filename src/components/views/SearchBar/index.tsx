@@ -23,7 +23,7 @@ const SearchBar = () => {
   // 검색 실행
   const serachStart = (str: string) => {
     if (!searchCheck()) return
-    searchRef.current!.blur()
+    searchRef.current?.blur()
     dispatch(onSearch()) // "검색 중" 이라는 상태 변경
     const searchParam = encodeURIComponent(str.trim().substring(0, 100))
     push(`/search/${searchParam}`)
@@ -36,9 +36,9 @@ const SearchBar = () => {
   }
 
   const onKeyEvent = throttle((e: KeyboardEvent<HTMLInputElement>) => {
-    if (!searchCheck()) return
+    if (!searchCheck() || !searchRef.current) return
     const key = e.key || e.keyCode
-    if (key === 'Enter' || key === 13) serachStart(searchRef.current!.value) // searchCheck() 함수에서 체크함
+    if (key === 'Enter' || key === 13) serachStart(searchRef.current.value) // searchCheck() 함수에서 체크함
   }, 700)
 
   const onMouseClick = throttle(() => {
