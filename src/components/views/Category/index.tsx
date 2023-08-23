@@ -12,8 +12,8 @@ interface IBlogCategory {
 const Category = ({ postCount, category }: IBlogCategory) => {
   const { pathname, query } = useRouter()
   return (
-    <aside>
-      <ul className="TagWrap flex justify-start items-center border-b border-b-BLG300 dark:border-b-BLG700 ease">
+    <aside className="relative py-[4px] overflow-auto no-scrollbar border-b border-b-BLG300 dark:border-b-BLG700">
+      <ul className="TagWrap flex justify-start items-center ease">
         <li className={`${text.light} ${pathname === '/blog' ? 'TagActive' : ''} TagItem basic text-lg rounded-sm after:bg-BLG800 dark:after:bg-BLG300 hover:bg-BLG300 dark:hover:bg-BLG700`}>
           <Link href="/blog" className="fcc gap-2">
             <BsFillGridFill />
