@@ -13,10 +13,11 @@ export const parseDatabaseItems = (databaseItems: Awaited<ReturnType<typeof getD
     const { 카테고리, 작성일, 이름, 태그 } = item.properties
 
     // 블로그 목록 데이터 가공
+    console.log(item)
 
     let cover = ''
     if (item.cover === null) cover = defaultThumb
-    else cover = item.cover?.type === 'external' ? item.cover.external.url : item.cover?.file ? item?.cover?.file.url : defaultThumb
+    else cover = item.cover.type === 'external' ? item.cover.external.url : item.cover.file ? item?.cover.file.url : defaultThumb
 
     const title = 이름?.type === 'title' ? 이름.title[0].plain_text : ''
     const published = 작성일?.type === 'date' ? (작성일.date?.start ? 작성일.date.start : '') : '' || ''
