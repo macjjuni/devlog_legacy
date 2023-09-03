@@ -16,7 +16,7 @@ export const parseDatabaseItems = (databaseItems: Awaited<ReturnType<typeof getD
     console.log(item)
 
     let cover = ''
-    if (item.cover === null) cover = defaultThumb
+    if (!item.cover) cover = defaultThumb
     else cover = item.cover.type === 'external' ? item.cover.external.url : item.cover.file ? item?.cover.file.url : defaultThumb
 
     const title = 이름?.type === 'title' ? 이름.title[0].plain_text : ''
