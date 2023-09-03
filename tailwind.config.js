@@ -28,7 +28,7 @@ const theme = {
       red: '#ED2B2A',
       navy: '#341f97',
       black: '#222f3e',
-      primary: '#ee5253',
+      primary: '#228bf8',
       secondary: '#32D962',
       SUCCESS: '#04cf52',
       WARNING: '#FFAB49',

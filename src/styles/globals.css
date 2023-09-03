@@ -178,16 +178,6 @@ body {
   vertical-align: baseline;
 }
 
-.Logo::after {
-  content: '';
-  position: absolute;
-  bottom: 2px;
-  right: -6px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-}
-
 .tooltip {
   position: absolute;
   top: -38px;
