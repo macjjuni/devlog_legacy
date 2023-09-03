@@ -46,4 +46,8 @@ next-env.d.ts
 !.yarn/plugins
 !.yarn/releases
 !.yarn/sdks
+<<<<<<< HEAD
 !.yarn/versions
+=======
+!.yarn/versions
+>>>>>>> dev
