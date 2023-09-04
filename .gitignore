@@ -36,6 +36,7 @@ next-env.d.ts
 
 # /.gitignore
 
+# used Zero-Install
 .yarn/*
 !.yarn/cache
 !.yarn/patches
